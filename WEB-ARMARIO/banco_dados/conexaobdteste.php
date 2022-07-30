@@ -9,6 +9,6 @@ $banco="bdarmario";
 
 //conexao
 
-$con = new PDO("mysql:host=$servidor;dbname=$banco",$usuario,$senha)
+$conexao = new PDO("mysql:host=$servidor;dbname=$banco",$usuario,$senha)
 
 ?>

@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastro</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+<?php
+
+require('banco_dados/conexaobdteste.php');
+
+//inserir um dado no banco
+
+$sql = $conexao->prepare("INSERT INTO aluno VALUES (null,'Erick GS','teste@teste.com','Desenvolvimento de Sistemas','59314424','noturno')"); 
+
+$sql->execute();
+
+?>
