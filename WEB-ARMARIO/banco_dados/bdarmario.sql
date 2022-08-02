@@ -1,4 +1,4 @@
-mysql -h localhost -u root -p
+mysql -u root -p
 
 drop database if exists dbarmario;
 

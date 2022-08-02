@@ -9,8 +9,8 @@ require('banco_dados/conexaobdteste.php');
 
 //ANTI SQL INJECTION SEGURANÇA
 
-if(isset($_POST['enviar'])&& isset($_POST['rm']&& isset($_POST['nome']&& isset($_POST['email'])
-&& $_POST['curso']&& isset($_POST['senha']&& isset($_POST['periodo']{
+if (isset($_POST['enviar'])&& isset($_POST['rm'])&& isset($_POST['nome'])&& isset($_POST['email'])
+&& ($_POST['curso'])&& isset($_POST['senha'])&& isset($_POST['periodo'])){
 
  $rm = $_POST['rm'];
  $nome = $_POST['nome'];
@@ -22,9 +22,8 @@ if(isset($_POST['enviar'])&& isset($_POST['rm']&& isset($_POST['nome']&& isset($
 
  $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')"); 
  $sql->execute(array($rm,$nome,$email,$curso,$senha,$periodo));
+}  
 
-}
- 
 
  ?>
 
@@ -57,6 +56,6 @@ if(isset($_POST['enviar'])&& isset($_POST['rm']&& isset($_POST['nome']&& isset($
 
 
         </form>
-        <script src="" async defer></script>
+    
     </body>
  </html>
