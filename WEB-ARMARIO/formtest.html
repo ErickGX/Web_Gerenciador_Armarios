@@ -1,36 +1,6 @@
-<?php
-
-require('banco_dados/conexaobdteste.php');
-
-
-//inserir um dado no banco sem proteçao
-
-//$sql = $conexao->prepare("INSERT INTO aluno VALUES (666999,'SQL','teste@teste.com','Desenvolvimento de Sistemas','kekson4444','noturno')"); 
-//$sql->execute();
-
-//ANTI SQL INJECTION SEGURANÇA
 
 
 
- $rm = $_POST['rm'];
- $nome = $_POST['nome'];
- $email = $_POST['email'];
- $curso = $_POST['curso'];
- $senha = $_POST['senha'];
- $periodo = $_POST['periodo'];
-
-
-
-
-
-
- $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')"); 
- $sql->execute(array($rm,$nome,$email,$curso,$senha,$periodo));
-
-     
-        
-        ?>
-    
 
 <!DOCTYPE html>
  <html>
@@ -64,8 +34,3 @@ require('banco_dados/conexaobdteste.php');
 
 
         </form>
-
-
-
-
-  

@@ -24,16 +24,19 @@ create table aluno(
 );
 
 create table administracao(
+
     id_adm int not null AUTO_INCREMENT PRIMARY KEY,
     usuario VARCHAR(20) not null,
     senha_adm VARCHAR(20) not null,
     nome_adm VARCHAR(100) not null,
     email VARCHAR(100) not null,
-    telefone VARCHAR(11) not null    
+    telefone VARCHAR(11) not null
+
 );
 
 
 create table telefones(
+
     rm_aluno int not null,
     telefone varchar(11) not null,
 
@@ -43,6 +46,7 @@ create table telefones(
 );
 
 create table aluguel(
+
     id_aluguel int AUTO_INCREMENT not null PRIMARY KEY,
     plano VARCHAR(9) not null,
     data_aluguel date not null,
@@ -52,7 +56,8 @@ create table aluguel(
     constraint FK_aluguel_aluno FOREIGN KEY (rm_aluno) 
         REFERENCES aluno(rm_aluno),
     constraint FK_aluguel_armario FOREIGN KEY (nome_armario)
-        REFERENCES armario(nome_armario)        
+        REFERENCES armario(nome_armario)   
+             
 );
 
 
