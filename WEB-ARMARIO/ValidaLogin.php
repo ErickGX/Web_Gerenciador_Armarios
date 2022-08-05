@@ -5,7 +5,8 @@ require('banco_dados/conexaobdteste.php');
 session_start();
 
 
-
+//se os campos estiverem empty 'vazios' o formulario nao é enviado e retorna pra mesma pagina de login 
+//falta mais tratamento porem o basico funciona , fazer mais segurança e tratamento de informação
 if(isset($_POST['Logar']) && !empty($_POST['rmlogin']) && !empty($_POST['senhalogin'])) 
 {
 
@@ -39,8 +40,6 @@ if(isset($_POST['Logar']) && !empty($_POST['rmlogin']) && !empty($_POST['senhalo
         $_SESSION['SENHA'] = $senhalogin;
         header('Location: menu.php');
     }
-
-
 
 }else{
     //nao acessa   e retorna prologin

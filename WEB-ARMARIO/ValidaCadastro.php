@@ -34,13 +34,6 @@ if (isset($_POST['enviar']) && !empty($_POST['rm']) && !empty($_POST['nome']) &&
     
 }
 
-
- 
-
-
-
-
-
 //DAQUI PRA BAIXO SÓ B.O
 
 //inserir um dado no banco sem proteçao
@@ -51,17 +44,12 @@ if (isset($_POST['enviar']) && !empty($_POST['rm']) && !empty($_POST['nome']) &&
 //ANTI SQL INJECTION SEGURANÇA
 
 
-
 //  $rm = $_POST['rm'];
 //  $nome = $_POST['nome'];
 //  $email = $_POST['email'];
 //  $curso = $_POST['curso'];
 //  $senha = $_POST['senha'];
 //  $periodo = $_POST['periodo'];
-
-
-
-
 
 
 //  $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')"); 
