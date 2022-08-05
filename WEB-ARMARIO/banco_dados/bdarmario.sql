@@ -1,6 +1,6 @@
 mysql -u root -p
 
-drop database if exists dbarmario;
+drop database if exists barmario;
 
 create database if not exists bdarmario;
 
@@ -59,5 +59,3 @@ create table aluguel(
         REFERENCES armario(nome_armario)   
              
 );
-
-

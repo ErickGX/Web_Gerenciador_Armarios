@@ -9,6 +9,16 @@ $banco="bdarmario";
 
 //conexao
 
-$conexao = new PDO("mysql:host=$servidor;dbname=$banco",$usuario,$senha)
+$conexao = new mysqli($servidor,$usuario,$senha,$banco);
+
+    if($conexao->connect_errno)
+    {
+        echo "Erro". mysqli_connect_error(). mysqli_errno($conexao);
+    }
+    else{
+        echo "Conexão Efetuada";
+        echo "<br><br>";
+    }
+
 
 ?>
