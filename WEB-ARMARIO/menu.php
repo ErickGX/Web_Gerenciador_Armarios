@@ -1,15 +1,17 @@
 <?php
 session_start();
-//print_r($_SESSION);
+print_r($_SESSION);
 
 
 if ((!isset($_SESSION['RM']) == true) and (!isset($_SESSION['SENHA']) == true)) {
     unset($_SESSION['RM']);
     unset($_SESSION['SENHA']);
     header('Location: logintestERICK.php');
+}else {
+    $logado = $_SESSION['RM'];
 }
 
-$logado = $_SESSION['RM'];
+
 ?>
 
 <!DOCTYPE html>

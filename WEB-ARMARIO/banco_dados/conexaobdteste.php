@@ -5,7 +5,7 @@
 $servidor="localhost";
 $usuario="root";
 $senha="";
-$banco="bdarmario";
+$banco="bdarmariov2";
 
 //conexao
 
