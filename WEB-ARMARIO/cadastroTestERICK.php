@@ -1,4 +1,52 @@
+<?php
 
+// //Codigos de validacoes
+
+// filter_input(); -> filter_var();
+ /*
+// FILTER_SANITIZE_SPECIAL_CHARS;
+// FILTER_SANITIZE_NUMBER_INT;
+// FILTER_SANITIZE_EMAIL;
+
+
+// FILTER_VALIDATE_INT;
+// FILTER_VALIDATE_EMAIL;
+// FILTER_VALIDATE_BOOLEAN;
+
+*/
+
+if(isset($_POST['enviar'])) {
+    
+    $rm = $_POST['rm'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $curso = $_POST['curso'];
+    $senha = $_POST['senha'];
+    $periodo = $_POST['periodo'];
+
+    //ARRAY DE ERROS
+    $erros = [];
+
+    //SANITIZAR 
+
+    $rm = filter_input(INPUT_POST, 'rm', FILTER_SANITIZE_NUMBER_INT);
+    $nome = filter_input(INPUT_POST, 'nome',FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $curso = filter_input(INPUT_POST, 'curso', FILTER_SANITIZE_SPECIAL_CHARS);
+    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+    $periodo = filter_input(INPUT_POST, 'periodo', FILTER_SANITIZE_SPECIAL_CHARS);  
+
+
+
+    
+
+
+
+}
+
+
+
+?>
 
 
 
