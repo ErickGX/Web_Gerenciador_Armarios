@@ -1,7 +1,3 @@
-<?php
-session_destroy();
-//revisar codigo
-?>
 
 <!DOCTYPE html>
 <html>
