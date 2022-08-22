@@ -85,7 +85,7 @@ if(isset($_POST['enviar'])) {
         <h1>Teste inserir com sql</h1>
 
          
-        <!-- <form method="POST" action="ValidaCadastro.php"><br> -->
+         <form method="POST" action="ValidaCadastro.php"><br> 
         <form method="POST" action="#"><br>
 
             <input type="number" name="rm" id="" placeholder="bota rm ae" autofocus required  maxlength="5" ><br>
