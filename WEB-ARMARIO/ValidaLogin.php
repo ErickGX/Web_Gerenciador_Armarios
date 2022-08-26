@@ -1,6 +1,8 @@
 <?php
 
-require('banco_dados/conexaobdteste.php');
+//require('banco_dados/conexaobdteste.php');  versão sem orientação a objeto 
+
+require_once('erick-BD-Orientado/conexaoBD.php'); //nova versao que estou montando com funcoes e orientação PDO BD
 
 session_start();
 
@@ -17,7 +19,7 @@ if(isset($_POST['Logar']) && !empty($_POST['rmlogin']) && !empty($_POST['senhalo
     // print_r('<br>');
     // print_r("RM : "    .$rmlogin);
     // print_r('<br>');
-    // print_r("SENHA :"    . $senhalogin);
+    // print_r("SENHA :"  . $senhalogin);
 
     $consulta = "SELECT * FROM aluno WHERE rm_aluno =  '$rmlogin' and senha = '$senhalogin'";
 
@@ -41,10 +43,10 @@ if(isset($_POST['Logar']) && !empty($_POST['rmlogin']) && !empty($_POST['senhalo
         header('Location: menu.php');
     }
 
-}else{
-    //nao acessa   e retorna prologin
-    header('Location: logintestERICK.php');
-}
+    }else{
+        //nao acessa   e retorna prologin
+        header('Location: logintestERICK.php');
+    }
 
 
 

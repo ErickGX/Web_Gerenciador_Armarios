@@ -14,7 +14,6 @@
 // FILTER_VALIDATE_BOOLEAN;
 
 */
-
 if(isset($_POST['enviar'])) {
     
     $rm = $_POST['rm'];
@@ -29,6 +28,8 @@ if(isset($_POST['enviar'])) {
 
     //SANITIZAR 
 
+    // https://www.youtube.com/watch?v=4IHtfXrNN4w&t=1005s
+
     $rm = filter_input(INPUT_POST, 'rm', FILTER_SANITIZE_NUMBER_INT);
     $nome = filter_input(INPUT_POST, 'nome',FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -36,16 +37,33 @@ if(isset($_POST['enviar'])) {
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
     $periodo = filter_input(INPUT_POST, 'periodo', FILTER_SANITIZE_SPECIAL_CHARS);  
 
+    echo "<p>RM   : ".$rm."</p>";
+    echo "<p>Nome : ".$nome."</p>";
+    echo "<p>Email : ".$email."</p>";
+    echo "<p>Curso : ".$curso."</p>";
+    echo "<p>Senha : ".$senha."</p>";
+    echo "<p>Periodo : ".$periodo."</p>";
 
 
-    
-
+    //Filtros de validacao
+    if(!$rm = filter_input(INPUT_POST, 'rm', FILTER_VALIDATE_INT)){
+        $erros[] = "RM invalido, insira seu RM cadastrado na ETEC irmã agostina";
+    }
+     
+    if(!$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)){
+        $erros[] = "E-mail invalido";
+    }
+     
+    if(!empty($erros)){
+        foreach($erros as $erro) {
+            echo "<li>$erro</li>";
+        }
+    }else{
+        echo "<p>Dados Corretos</p>";
+    }
 
 
 }
-
-
-
 ?>
 
 
@@ -67,9 +85,10 @@ if(isset($_POST['enviar'])) {
         <h1>Teste inserir com sql</h1>
 
          
-        <form method="POST" action="ValidaCadastro.php"><br>
+         <form method="POST" action="ValidaCadastro.php"><br> 
+        <form method="POST" action="#"><br>
 
-            <input type="number" name="rm" id="" placeholder="bota rm ae" autofocus required ><br>
+            <input type="number" name="rm" id="" placeholder="bota rm ae" autofocus required  maxlength="5" ><br>
 
             <input type="text" name="nome" id="" placeholder="bota name ae" required><br>
 

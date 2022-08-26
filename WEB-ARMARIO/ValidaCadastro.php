@@ -1,6 +1,8 @@
 <?php
 
-require('banco_dados/conexaobdteste.php');
+//require('banco_dados/conexaobdteste.php');  // versão sem orientação a objeto 
+
+require_once('erick-BD-Orientado/conexaoBD.php'); //nova versao que estou montando com funcoes e orientação PDO BD
 
 print_r($_REQUEST);
 
