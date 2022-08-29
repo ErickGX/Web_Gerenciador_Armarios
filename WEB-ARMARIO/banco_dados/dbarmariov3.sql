@@ -95,7 +95,7 @@ create table locacao (
 create table compartilhamento (
 
     id int not null auto_increment primary key,
-    nome varchar(100) not null
+    nome varchar(100) not null,
     rm varchar(9) not null,
     id_locacao int not null,
 

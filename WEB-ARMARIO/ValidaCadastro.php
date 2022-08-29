@@ -26,9 +26,8 @@ if (isset($_POST['enviar']) && !empty($_POST['rm']) && !empty($_POST['nome']) &&
 
 
 
-    $addAluno = mysqli_query($conexao , "INSERT INTO aluno(rm_aluno,nome,email,curso,senha,periodo) 
-    VALUES ('$rm','$nome','$email','$curso','$senha','$periodo')");
-
+     $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')"); 
+     $sql->execute(array($rm,$nome,$email,$curso,$senha,$periodo));
     header('Location: logintestERICK.php');
     
 
