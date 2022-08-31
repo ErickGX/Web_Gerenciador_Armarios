@@ -21,6 +21,7 @@ body {
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 212);
+    
 }
 
 .form-image {
@@ -31,9 +32,10 @@ body {
     padding: 1rem;
 }
 
-.form-image {
+/* Erro de duplo width  na div da imagem */
+/* .form-image {
     width: 35rem;
-}
+} */
 
 .form {
     width: 50%;
@@ -166,7 +168,7 @@ body {
     color: #fff;  
 }
 
-@media screen and (max-width:1330px) {
+@media screen and (max-width:1336px) {
     .form-image{
         display: none;
     }
@@ -178,6 +180,7 @@ body {
         width: 100%;
     }
 }
+
 
 @media screen and (max-width:1069px){
     .container{
@@ -230,4 +233,3 @@ body {
         margin-top: 00.5rem;
     }
 }
-
