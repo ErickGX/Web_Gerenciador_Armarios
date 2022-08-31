@@ -16,12 +16,14 @@ create table armario(
 
 create table aluno(
     id_aluno integer not null auto_increment primary key,
-    rm_aluno int null UNIQUE,    
+    CPF integer not null UNIQUE,
+    rm_aluno int not null UNIQUE,    
     nome VARCHAR(100) not null,
     email VARCHAR(100) not null,
     curso VARCHAR(50) not null, 
     senha VARCHAR(20) not null ,
-    periodo VARCHAR(10) not null
+    periodo VARCHAR(10) not null,
+    modulo VARCHAR(10) not null
 );
 
 
