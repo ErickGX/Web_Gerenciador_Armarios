@@ -18,6 +18,7 @@ create table armario (
 create table curso (
 
     id int not null auto_increment primary key,
+    codigo_curso varchar(2) not null,
     nome varchar(50) not null,
     duracao int not null
 
