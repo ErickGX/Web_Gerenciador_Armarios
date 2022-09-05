@@ -44,11 +44,15 @@ class conexaobd
             $this->_conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->_conexao->exec("set names utf8");
 
-            echo "conexao estabelecida";
+            //echo "conexao estabelecida";
         } catch (PDOException $erro) {
             echo "Erro na conexão:" . $erro->getMessage();
         }
     }
 
-    public  function 
+    //funcao para verificar se de fato possui uma conexao valida
+    public  function Conectado(){
+        return $this->_conexao ? $this->_conexao : null; 
+    }
 }
+////https://www.youtube.com/watch?v=Xbkels1hDps

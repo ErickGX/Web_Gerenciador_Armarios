@@ -4,6 +4,12 @@ include_once 'conexaoBD.php';
 
 $conexao = new conexaobd("localhost", "root","","bdarmariov3");
 
+if (is_null($conexao->Conectado())){
+    echo "<br/> A conexao nao foi realizada";
+}else{
+
+    //echo "<br/> Conectado ao banco";
+}
 
 ?>
 
