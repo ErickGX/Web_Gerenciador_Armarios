@@ -50,6 +50,12 @@ if (is_null($conexao->Conectado())){
                         <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" required>
                     </div>
 
+
+                    <div class="input-box">
+                        <label for="firstname" class="form-label">CPF</label>
+                        <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" required>
+                    </div>
+
                     <div class="input-box">
                         <label for="password" class="form-label">Senha</label>
                         <input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" required>
