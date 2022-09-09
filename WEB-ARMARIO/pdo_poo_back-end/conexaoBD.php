@@ -23,7 +23,6 @@ class conexaobd
     private $_username;
     private $_password;
     private $_dbname;
-
     public $_conexao;
 
 
