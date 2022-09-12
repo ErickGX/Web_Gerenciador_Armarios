@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
+    <script src="scriptForms.js" defer></script>
     <title>Forms JS</title>
 </head>
+
 <body>
-    <script src="scriptForms.js"></script>
+    
+    <form action="">
+        <h2>
+            Entrar na lista
+        </h2>
+
+        <div class="input">
+            <input required type="text">
+            <label>Nome</label>
+            <span class="error"></span>
+        </div>
+
+        <div class="input">
+            <input required type="email">
+            <label>Email</label>
+            <span class="error"></span>
+        </div>
+    </form>
+
 </body>
 </html>

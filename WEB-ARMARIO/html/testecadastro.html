@@ -14,8 +14,8 @@
             <img src="img/undraw_security_re_a2rk.svg" width="50%" height="100%" alt="img/testeimagem.jpg"/>
         </div>
        
-        <div class="form">
-            <form action="#">
+        <div class="form" >
+            <form action="#" id="Forms">
                 <div class="form-header">
 
                     <div class="title">
@@ -30,17 +30,20 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="firstname" class="form-label">Nome</label>
-                        <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" required>
+                        <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" class="inputs required" oninput="nameValidate();">
+                        <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
                     </div>
 
                     <div class="input-box">
                         <label for="password" class="form-label">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" required>
+                        <input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required">
+                        <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
                     </div>
 
                     <div class="input-box">
                         <label for="password" class="form-label">Confirmação</label>
-                        <input type="password" name="password" id="confirmpassword" placeholder="CONFIRME SUA SENHA" required>
+                        <input type="password" name="password" id="confirmpassword" placeholder="CONFIRME SUA SENHA" class="input required">
+                        <span class="span-required">Senha devem ser compatíveis</span>
                     </div>
 
                     <div class="input-box">
@@ -101,4 +104,22 @@
     </div>
     
 </body>
+<script>
+    const form = document.getElementById('Forms');
+    const campos = document.querySelectorAll('.required');
+    const spans = document.querySelectorAll('.span-required');
+    const  emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    
+    function nameValidate(){
+        if (campos[0].value.length<3)
+        {
+            console.log("Nome deve ter 3 caracteres");
+        } 
+        else
+        {
+            console.log("Nome validado com sucesso");
+        }
+    }
+</script>
 </html>
+<!--https://www.youtube.com/watch?v=YcTkoIAi0Bg&ab_channel=GustavoNeitzke Link do JS que to vendo vsf-->
