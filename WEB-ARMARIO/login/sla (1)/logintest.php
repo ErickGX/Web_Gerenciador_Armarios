@@ -9,22 +9,39 @@
 </head>
 <body>
 	<div class="main-login">
+
 		<div class="pt-esquerda-login">
-			<h1>Faça Login<br>Entre para nosso time</h1>
+
+			<h1>Alugue seu armario!</h1>
+
 			<img src="astronauta.svg" class="left-login-img" alt="astronauta animação">
+
 		</div>
+
+
 		<div class="pt-direita-login">
+
 			<div class="card-login">
+
 				<h1>Login</h1>
+
 				<div class="form">
-					<label for="RM">RM</label>
+					
+					<label for="RM">RM:</label>
 					<input type="number" name="RM" placeholder="RM">
+
 				</div>
 				<div class="form">
-					<label for="senha">Senha</label>
+
+					<label for="senha">Senha:</label>
 					<input type="password" name="senha" placeholder="Senha">
+
 				</div>
-				<button class="bnt-login">Login</button>
+
+				<button class="bnt-login">Entrar</button>
+				<button class="bnt-login">Cadastre-se</button>
+
+				<a href="html/cadastro.html">esqueci minha senha</a>
 			</div>
 		</div>
 

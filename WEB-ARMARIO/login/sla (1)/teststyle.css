@@ -54,8 +54,8 @@ body*{
 	font-weight: 800;
 	margin: 0;
 }
-.from{
-	width: 100px;
+.form{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -69,7 +69,7 @@ body*{
 	padding: 15px;
 	background: #514869;
 	color: #f0ffffde;
-	fort-size: 12pt;
+	font-size: 12pt;
 	box-shadow: 0px 10px 40px #00000056;
 	outline: none;
 	box-sizing: border-box;
@@ -79,7 +79,7 @@ body*{
 	margin-bottom: 10px;
 
 }
-.from > input:: placeholder{
+.from > input::placeholder{
 	color: #f0ffff94;
 	margin-bottom: 10px;
 
@@ -87,7 +87,7 @@ body*{
 .bnt-login{
 	width: 100%;
 	padding: 16px 0px;
-	margin: 25px;
+	margin: 10px;
 	border: none;
 	border-radius: 8px;
 	outline: none;
@@ -98,6 +98,10 @@ body*{
 	background: #00ff88;
 	cursor: pointer;
 	box-shadow: 0px 10px 40px -12px #00ff0052;
+}
+a{
+	color: #00ff88;
+	margin: 10px;
 }
 
 @media only screen and (max-width:  950px){
@@ -126,4 +130,8 @@ body*{
 		width: 80%;
 	}
 
+}@media only screen and (max-width: 450px){
+	.left-login-img{
+		display: none;
+	}
 }
