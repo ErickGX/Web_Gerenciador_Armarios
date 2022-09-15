@@ -1,5 +1,5 @@
 --drop database if exists bdarmariov3;
-
+--test
 create database if not exists bdarmariov3;
 
 use bdarmariov3;
