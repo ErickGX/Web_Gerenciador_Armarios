@@ -30,35 +30,48 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="firstname" class="form-label">Nome</label>
-                        <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" class="inputs required" oninput="nameValidate();">
+                        <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" class="input required" oninput="nameValidate();">
+                        
                         <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+
                     </div>
 
                     <div class="input-box">
                         <label for="password" class="form-label">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required">
-                        <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
+                        <input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required" oninput="senhaValidate();" >
+                        
+                        <span class="span-required">Senha com no mínimo 8 caracteres</span>
+
                     </div>
 
                     <div class="input-box">
                         <label for="password" class="form-label">Confirmação</label>
-                        <input type="password" name="password" id="confirmpassword" placeholder="CONFIRME SUA SENHA" class="input required">
+                        <input type="password" name="password" id="confirmpassword" placeholder="CONFIRME SUA SENHA" class="input required" oninput="confirmValidate();">
+                        
                         <span class="span-required">Senha devem ser compatíveis</span>
+
                     </div>
 
                     <div class="input-box">
                         <label for="number">Celular</label>
-                        <input type="number" name="Name" id="number" placeholder="(xx) xxxx-xxxx" required>
+                        <input type="number" name="Name" id="number" placeholder="(xx) xxxx-xxxx" class="input required" oninput="TelValidate();">
+
+                        <span class="span-required">Numero invalido</span>
+
                     </div>
 
                     <div class="input-box">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" id="email" placeholder="DIGITE SEU EMAIL" required>
+                        <input type="email" name="email" id="email" placeholder="DIGITE SEU EMAIL" class="input required" oninput="emailValidate();">
+
+                        <span class="span-required">Email invalido</span>
                     </div>
 
                     <div class="input-box">
                         <label for="RM">RM</label>
-                        <input type="number" name="RM" id="number" placeholder="ex:21134" required>
+                        <input type="number" name="RM" id="number" placeholder="ex:21134" class="input required" oninput="rmValidate();"> 
+                        
+                        <span class="span-required">Digite um RM validos</span>
                     </div>
 
                     <div class="input-box">
@@ -108,18 +121,92 @@
     const form = document.getElementById('Forms');
     const campos = document.querySelectorAll('.required');
     const spans = document.querySelectorAll('.span-required');
-    const  emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
-    
+    const  emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        nameValidate();
+        senhaValidate();
+        confirmValidate();
+        TelValidate();
+        emailValidate();
+        rmValidate();
+    }
+    );
+
+    function setError(index){
+        campos[index].style.border='1px solid #e63636';
+        spans[index].style.display = 'Block';
+    }
+
+    function RemoveError(index){
+        campos[index].style.border='';
+        spans[index].style.display = 'none';
+    }
+   
     function nameValidate(){
         if (campos[0].value.length<3)
         {
-            console.log("Nome deve ter 3 caracteres");
+            setError(0);
         } 
         else
         {
-            console.log("Nome validado com sucesso");
+            RemoveError(0);
         }
     }
+
+     function senhaValidate(){
+         if (campos[1].value.length<8)
+         {
+             setError(1);
+         }
+         else
+         {
+             RemoveError(1);
+         }
+     }
+
+     function confirmValidate(){
+         if (campos[2].value==campos[1].value){
+             RemoveError(2);
+         }
+         else{
+             setError(2);
+         }
+
+     }
+
+     function TelValidate(){
+         if(campos[3].value.length==11){
+            RemoveError(3);
+    }
+        else{
+            setError(3);
+        }
+     }
+
+     function emailValidate(){
+        if (emailRegex.test(campos[4].value))
+        {
+            RemoveError(4);
+        }
+        else
+        {
+           setError(4);
+        }
+    }
+
+    function rmValidate(){
+        if(campos[5].value.length==5)
+        {
+            RemoveError(5);
+        }
+        else
+        {
+            setError(5);
+        }
+    }
+
 </script>
 </html>
 <!--https://www.youtube.com/watch?v=YcTkoIAi0Bg&ab_channel=GustavoNeitzke Link do JS que to vendo vsf-->

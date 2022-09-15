@@ -31,7 +31,12 @@ body {
     background-color: #fdfff9d7;
     padding: 1rem;
 }
-
+.span-required{
+    font-size:12px;
+    margin: 3px 0 0 1px; 
+    display: none;
+    color: red;
+}
 /* Erro de duplo width  na div da imagem */
 /* .form-image {
     width: 35rem;
