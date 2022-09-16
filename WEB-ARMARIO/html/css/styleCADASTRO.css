@@ -173,6 +173,18 @@ body {
     color: #fff;  
 }
 
+
+/* Codigo para esconder setas de campos int --Erick */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 @media screen and (max-width:1336px) {
     .form-image{
         display: none;
@@ -238,3 +250,4 @@ body {
         margin-top: 00.5rem;
     }
 }
+
