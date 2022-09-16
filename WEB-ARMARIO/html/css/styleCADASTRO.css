@@ -13,9 +13,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(146, 204, 146);
+    background:  #201b2c;
 }
 
+.title{
+	color: #77ffc0;
+}
 .container {
     width: 80%;
     height: 80vh;
@@ -48,8 +51,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #ffff;
+    background-color: #2f2841;
     padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056
 }
 
 .form-header {
@@ -65,10 +70,11 @@ body {
 
 .login-button button{
     border: none;
-    background-color: #0ae9e9;
+    background-color: #00ff88;
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .login-button button:hover{
@@ -77,7 +83,7 @@ body {
 .login-button a{
     text-decoration: none;
     font-weight: 500;
-    color: #fff;
+    color: #2b134b;
 }
 
 .form-header h1::after{
@@ -85,7 +91,7 @@ body {
     display: block;
     width: 9rem;
     height: 0.3rem;
-    background-color: #0ae9e9;
+    background-color:#77ffc0 ;
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -102,6 +108,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
+    border-radius: 10px;
 }
 
 .input-box input{
@@ -109,22 +116,22 @@ body {
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
+    box-shadow: 1px 1px 6px;
 }
 
 .input-box input:hover{
-    background-color: #eeeeee75;
+    text-transform: capitalize;
 }
 
 .input-box input:focus-visible{
-    outline: 1px solid #0ae9e9;
+    outline: 3px solid #77ffc0;
 }
 
 .input-box label,
 .periodo-title h6{
     font-size: 0.75;
     font-weight: 600;
-    color: #000000c0;
+    color: white;
 }
 
 .input-box input::placeholder{
@@ -150,7 +157,7 @@ body {
 .periodo-input label{
     font-size: 0.81rem;
     font-weight: 600;
-    color:#000000c0;
+    color:#f0ffffde;
     
 }
 
@@ -158,19 +165,20 @@ body {
     width: 100%;
     margin-top: 0.5rem;
     border: none;
-    background-color: #00a1b6;
+    background-color: #00ff88;
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .cadastrar-button button:hover{
-    background-color: #6b63fff1;
+    background-color: #0ae9e9;
 }
 .cadastrar-button button a{
     text-decoration: none;
     font-size: 0.93rem;
     font-weight: 500;
-    color: #fff;  
+    color: #000000ef;  
 }
 
 
@@ -251,3 +259,15 @@ input[type="number"] {
     }
 }
 
+@media screen and (max-width:1440px) {
+    .form-image{
+        display: none;
+    }
+
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}

@@ -79,7 +79,7 @@ body*{
 	margin-bottom: 10px;
 
 }
-.from > input::placeholder{
+.form > input::placeholder{
 	color: #f0ffff94;
 	margin-bottom: 10px;
 
