@@ -34,8 +34,11 @@ class conexaobd
         $this->_password = $passwd;
         $this->_dbname = $db;
 
-    
+    }
 
+    //funcao para verificar se de fato possui uma conexao valida
+    public  function Conectado(){
+            
     
         try {
             $this->_conexao = new PDO("mysql:host=$this->_servername; dbname=$this->_dbname; charset=utf8", $this->_username, $this->_password);
@@ -47,10 +50,6 @@ class conexaobd
         } catch (PDOException $erro) {
             echo "Erro na conexão:" . $erro->getMessage();
         }
-}
-
-    //funcao para verificar se de fato possui uma conexao valida
-    public  function Conectado(){
         
         return $this->_conexao ? $this->_conexao : null; 
     }

@@ -42,7 +42,7 @@ if (is_null($conexao->Conectado())){
                         <button><a href="#">Logar</a></button>
                     </div>
 
-                </div>
+                </div>  
 
                 <div class="input-group">
                     <div class="input-box">

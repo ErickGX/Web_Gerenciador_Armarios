@@ -111,9 +111,31 @@ class aluno {
         $this->_situacao_Matricula = $situacao_matricula;
     }
 
+
+    // create table aluno (
+
+    //     id int not null auto_increment primary key,
+    //     rm int null unique,
+    //     nome varchar(100) not null,
+    //     email varchar(100) not null unique,
+    //     cpf varchar(11) not null unique,
+    //     senha varchar(20) not null,
+    //     modulo varchar(10) not null,
+    //     periodo varchar(10) not null,
+    //     situacao_matricula varchar(10) not null
+    
+    // );
     
 
+    ///Funcao cadastro aluno
 
+    include 'conexaobd.php'
+    function cadAluno (){
+        $stmt = ->prepare("INSERT INTO bdarmariov3 (name, age) VALUES (?, ?)");
+        $stmt->execute([$_POST['name'], 29]);
+        $stmt = null;
+
+    }
 
 
 
