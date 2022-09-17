@@ -1,6 +1,8 @@
 <?php
 
 
+
+//key git erick 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
 // create table aluno (
 
 //     id int not null auto_increment primary key,
@@ -127,15 +129,6 @@ class aluno {
     // );
     
 
-    ///Funcao cadastro aluno
-
-    include 'conexaobd.php'
-    function cadAluno (){
-        $stmt = ->prepare("INSERT INTO bdarmariov3 (name, age) VALUES (?, ?)");
-        $stmt->execute([$_POST['name'], 29]);
-        $stmt = null;
-
-    }
 
 
 

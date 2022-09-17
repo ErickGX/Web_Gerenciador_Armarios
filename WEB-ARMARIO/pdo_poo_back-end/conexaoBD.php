@@ -16,13 +16,15 @@
 
 
 ///classe de conexao com banco de dados
-class conexaobd
+class Conexaobd
 {
 
     private $_servername;
     private $_username;
     private $_password;
     private $_dbname;
+
+
     public $_conexao;
 
 
@@ -33,6 +35,7 @@ class conexaobd
         $this->_username = $user;
         $this->_password = $passwd;
         $this->_dbname = $db;
+        //$this->table = strtolower(get_class());
 
     }
 
@@ -42,7 +45,6 @@ class conexaobd
     
         try {
             $this->_conexao = new PDO("mysql:host=$this->_servername; dbname=$this->_dbname; charset=utf8", $this->_username, $this->_password);
-
             $this->_conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->_conexao->exec("set names utf8");
 
@@ -53,5 +55,33 @@ class conexaobd
         
         return $this->_conexao ? $this->_conexao : null; 
     }
+
+
+
+
+
+
+
+
+    public function insert($values = array())   //https://stackoverflow.com/questions/9144302/php-pdo-insert-method
+    {
+
+        foreach ($values as $field => $v)
+            $ins[] = ':' . $field;
+
+        $ins = implode(',', $ins);
+        $fields = implode(',', array_keys($values));
+        $sql = "INSERT INTO $this->table ($fields) VALUES ($ins)";
+
+        $sth = $this->_conexao->prepare($sql);
+        foreach ($values as $f => $v)
+        {
+            $sth->bindValue(':' . $f, $v);
+        }
+        $sth->execute();
+        //r
+    
+    }
+
 }
 ////https://www.youtube.com/watch?v=Xbkels1hDps

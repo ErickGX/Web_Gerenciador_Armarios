@@ -11,6 +11,8 @@ if (is_null($conexao->Conectado())){
     //echo "<br/> Conectado ao banco";
 }
 
+
+
 ?>
 
 

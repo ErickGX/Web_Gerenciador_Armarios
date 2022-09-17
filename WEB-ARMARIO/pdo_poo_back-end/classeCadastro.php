@@ -1,7 +1,15 @@
 <?php
 
 
-class cadastrar{
+class Cadastrar extends Conexaobd{
+
+
+
+
+
+
+
+
 
 
 
