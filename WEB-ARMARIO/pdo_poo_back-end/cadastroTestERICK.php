@@ -13,6 +13,7 @@
 // FILTER_VALIDATE_EMAIL;
 // FILTER_VALIDATE_BOOLEAN;
 
+
 */
 // if(isset($_POST['enviar'])) {
     
@@ -64,6 +65,15 @@
 
 
 // }
+
+
+require 'conexaobd.php';
+
+
+    
+    
+
+
 ?>
 
 
@@ -109,3 +119,4 @@
 
 
         </form>
+        </html>

@@ -1,8 +1,8 @@
 <?php
 
-//require('banco_dados/conexaobdteste.php');  // versão sem orientação a objeto
+//require('banco_dados/conexaobdteste.php');  // versão sem orientação a objeto 
 
-//require_once('erick-BD-Orientado/conexaoBD.php'); //nova versao que estou montando com funcoes e orientação PDO BD
+// require_once ''; //nova versao que estou montando com funcoes e orientação PDO BD
 
 // print_r($_REQUEST);
 
@@ -26,11 +26,14 @@
 
 
 
-    //  $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')");
+    //  $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')"); 
     //  $sql->execute(array($rm,$nome,$email,$curso,$senha,$periodo));
     // header('Location: logintestERICK.php');
 
-    require ('pdo_poo_back-end/conexaoBD.php');
+
+    //Funcao insert Coringa recebendo dados via array (Funcao antiga de 2012 possivelmente mto vulneravel, usada para testes)
+    include 'Conexaobd.php';
+
 
     $rm = $_POST['rm'];
     $nome = $_POST['nome'];
@@ -41,27 +44,28 @@
     $periodo = $_POST['periodo'];
     $matricula = $_POST['matricula'];
 
-    $insert = new Conexaobd('localhost', 'root', "", 'bdarmariov3');
+    $insert = new Conexaobd();
 
     $insert->Conectado();
 
 
 
+    //relacionado a funcao insert com array desabilitada
+
+    // $values = array('rm' => $rm, 'nome' => $nome, 'email' => $email, 'cpf' => $cpf, 'senha' => $senha, 'modulo' => $modulo, 'periodo' => $periodo, 'situacao_matricula' => $matricula);
+
+    // $table = 'aluno';
+
+    // $insert->insert($table, $values);
 
 
-    $values = array('rm' => $rm, 'nome' => $nome, 'email' => $email, 'cpf' => $cpf, 'senha' => $senha, 'modulo' => $modulo, 'periodo' => $periodo, 'situacao_matricula' => $matricula);
-
-    $table = 'aluno';
-
-    $insert->insert($table, $values);
-
-//}
+    //}
 
 //DAQUI PRA BAIXO SÓ B.O
 
 //inserir um dado no banco sem proteçao
 
-//$sql = $conexao->prepare("INSERT INTO aluno VALUES (666999,'SQL','teste@teste.com','Desenvolvimento de Sistemas','kekson4444','noturno')");
+//$sql = $conexao->prepare("INSERT INTO aluno VALUES (666999,'SQL','teste@teste.com','Desenvolvimento de Sistemas','kekson4444','noturno')"); 
 //$sql->execute();
 
 //ANTI SQL INJECTION SEGURANÇA
@@ -75,5 +79,5 @@
 //  $periodo = $_POST['periodo'];
 
 
-//  $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')");
+//  $sql = $conexao->prepare("INSERT INTO aluno VALUES ('?','?','?','?','?','?')"); 
 //  $sql->execute(array($rm,$nome,$email,$curso,$senha,$periodo));

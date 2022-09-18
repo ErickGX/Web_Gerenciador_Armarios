@@ -19,23 +19,26 @@
 class Conexaobd
 {
 
-    private $_servername;
-    private $_username;
-    private $_password;
-    private $_dbname;
+    private $_servername = 'localhost';
+    private $_username = 'root' ;
+    private $_password = '';
+    private $_dbname = 'bdarmariov3';
+    
 
-
-    public $_conexao;
+    public  $_conexao;
 
 
     //função para instanciar a conexao com BD
-    function __construct($server, $user, $passwd, $db)
+    //antes estava com parametros no construct porem na 
+    //hora de instanciar tinha que ficar passando valor preferi colocar direto no atributo de classe
+      function __construct() //$server, $user, $passwd, $db
     {
-        $this->_servername = $server;
-        $this->_username = $user;
-        $this->_password = $passwd;
-        $this->_dbname = $db;
-        //$this->table = strtolower(get_class());
+        // $this->_servername = $server;
+        // $this->_username = $user;
+        // $this->_password = $passwd;
+        // $this->_dbname = $db;
+        
+        
 
     }
 
@@ -53,35 +56,37 @@ class Conexaobd
             echo "Erro na conexão:" . $erro->getMessage();
         }
         
-        return $this->_conexao ? $this->_conexao : null; 
-    }
-
-
-
-
-
-
-
-
-    public function insert($values = array())   //https://stackoverflow.com/questions/9144302/php-pdo-insert-method
-    {
-
-        foreach ($values as $field => $v)
-            $ins[] = ':' . $field;
-
-        $ins = implode(',', $ins);
-        $fields = implode(',', array_keys($values));
-        $sql = "INSERT INTO $this->table ($fields) VALUES ($ins)";
-
-        $sth = $this->_conexao->prepare($sql);
-        foreach ($values as $f => $v)
-        {
-            $sth->bindValue(':' . $f, $v);
-        }
-        $sth->execute();
-        //r
+        return $this->_conexao ? $this->_conexao : null;
+        
     
     }
+
+
+
+
+
+
+
+
+    // public function insert($table, $values = array())   //https://stackoverflow.com/questions/9144302/php-pdo-insert-method
+    // {
+        
+    //     foreach ($values as $field => $v)
+    //         $ins[] = ':' . $field;
+
+    //     $ins = implode(',', $ins);
+    //     $fields = implode(',', array_keys($values));
+    //     $sql = "INSERT INTO $table ($fields) VALUES ($ins)";
+
+    //     $sth = $this->_conexao->prepare($sql);
+    //     foreach ($values as $f => $v)
+    //     {
+    //         $sth->bindValue(':' . $f, $v);
+    //     }
+    //     $sth->execute();
+    //     //r
+    
+    // }
 
 }
 ////https://www.youtube.com/watch?v=Xbkels1hDps
