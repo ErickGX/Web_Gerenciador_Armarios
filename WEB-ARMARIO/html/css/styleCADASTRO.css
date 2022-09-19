@@ -207,7 +207,7 @@ input[type="number"] {
 }
 
 
-@media screen and (max-width:1069px){
+@media screen and (max-width:1100px){
     .container{
         width: 90%;
         height: auto;
@@ -269,5 +269,31 @@ input[type="number"] {
     }
     .form{
         width: 100%;
+    }
+}
+@media screen and (max-width:900px){
+    .container{
+        width: 65%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+}
+@media screen and (max-width:530px){
+    .container{
+        width: 95%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
     }
 }

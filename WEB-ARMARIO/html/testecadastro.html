@@ -35,6 +35,12 @@
                         <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
 
                     </div>
+                    <div class="input-box">
+                        <label for="RM">RM</label>
+                        <input type="number" name="RM" id="number" placeholder="ex:21134" class="input required" oninput="rmValidate();"> 
+                        
+                        <span class="span-required">Digite um RM validos</span>
+                    </div>
 
                     <div class="input-box">
                         <label for="password" class="form-label">Senha</label>
@@ -45,7 +51,7 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="password" class="form-label">Confirmação</label>
+                        <label for="password" class="form-label">Confirmação/senha</label>
                         <input type="password" name="password" id="confirmpassword" placeholder="CONFIRME SUA SENHA" class="input required" oninput="confirmValidate();">
                         
                         <span class="span-required">Senha devem ser compatíveis</span>
@@ -65,13 +71,6 @@
                         <input type="email" name="email" id="email" placeholder="DIGITE SEU EMAIL" class="input required" oninput="emailValidate();">
 
                         <span class="span-required">Email invalido</span>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="RM">RM</label>
-                        <input type="number" name="RM" id="number" placeholder="ex:21134" class="input required" oninput="rmValidate();"> 
-                        
-                        <span class="span-required">Digite um RM validos</span>
                     </div>
 
                     <div class="input-box">
