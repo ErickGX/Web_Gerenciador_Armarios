@@ -28,6 +28,7 @@ body {
 }
 
 .form-image {
+    
     width: 50%;
     display: flex;
     justify-content: center;
@@ -46,6 +47,7 @@ body {
 } */
 
 .form {
+
     width: 50%;
     display: flex;
     justify-content: center;
