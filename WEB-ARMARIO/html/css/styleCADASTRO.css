@@ -60,9 +60,9 @@ body {
 }
 
 .form-header {
-    margin-top: 0.5rem;
+    margin-top: 0.15rem;/*aqui sobe o form header todo */
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between; /*aqui altera as posições dos form elements */
 }
 
 .login-button{
@@ -91,10 +91,10 @@ body {
 .form-header h1::after{
     content: '';
     display: block;
-    width: 9rem;
-    height: 0.3rem;
+    width: 9rem; /*aqui altera a linha de baixo do nome Cadastro*/
+    height: 0.4rem;
     background-color:#77ffc0 ;
-    margin: 0 auto;
+    margin: 5 auto;
     position: absolute;
     border-radius: 10px;
 }
@@ -103,22 +103,22 @@ body {
     display: flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    padding: 1rem 0;
+    padding: 1.3rem 0rem ; /*alterei aqui para mexer na altura e no espaço dos campos */
 }
 
 .input-box{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem;
+    margin-bottom: 0rem;/*Alterei aqui e diminuiu os campos*/
     border-radius: 10px;
 }
 
 .input-box input{
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
+    margin: 0.6rem 2; /*corrigi o erro de enviar o forms/ aqui altera a altura dos botons */
+    padding: 0.8rem 1.2rem; /*altera o tamamho dos campos */
     border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px;
+    border-radius: 15px; /*altera as bordas dos campos */
+    box-shadow: 5px 5px 10px; /*alterei a sombra dos campos*/
 }
 
 .input-box input:hover{
@@ -263,7 +263,7 @@ input[type="number"] {
 
 @media screen and (max-width:1440px) {
     .form-image{
-        display: none;
+        display:none;
     }
 
     .container{
