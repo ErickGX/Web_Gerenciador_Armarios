@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/styleCADASTRO.css">
+   <link rel="stylesheet" href="../public/css/styleCADASTRO.css">
     <title>Formulário Cadastro</title>
 </head>
 <body>
     <div class="container">
 <!--b.o no css, ver isso amanhã-->
         <div class="form-image">
-            <img src="img/undraw_security_re_a2rk.svg" width="50%" height="100%" alt="img/testeimagem.jpg"/>
+            <img src="../public/imagens/undraw_security_re_a2rk.svg" width="50%" height="100%" alt="img/testeimagem.jpg"/>
         </div>
        
         <div class="form" >
@@ -188,7 +188,7 @@
              RemoveError(2);
          }
      }
-        //corrigido bug da array , tava comparando a arr3 com a arr1 , a certa é 3==2
+     //corrigido bug da array , tava comparando a arr3 com a arr2 , a certa é 3==1
      function confirmValidate(){
          if (campos[3].value==campos[2].value){
              RemoveError(3);
