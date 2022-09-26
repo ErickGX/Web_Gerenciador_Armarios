@@ -6,50 +6,42 @@
 }
 
 body {
-    background-color: #242333;
-    color: #fff;
+    background-color: #2b134b;
+    color:  #fff;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+ /* flex-direction: column; */
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    font-family: 'cosmic sans-serif', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
 }
 
-.movies-container{
+.containerDeArea{
     margin: 20px 0;
 }
 
-.movies-container select{
+.containerDeArea select{
     background-color: #fff;
     border: 0;
     border-radius: 5px;
     font-size: 16px;
     margin-left: 10px;
     padding: 5px 15px 5px 15px;
-    -moz-appearance: none;
+
+   -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-
 }
 
-.container{
+.containerDeArmarios{
     perspective: 1000px;
     margin-bottom: 30px;
 
 }
 
-
 .armario{
-    background-color: #444451;
-    /* height: 26px;
-    width: 32px;
-    margin: 5px;
-    font-size: 30px;
-    /* border-top-left-radius: 10px;
-    border-top-right-radius: 10px; */
-
+    background-color: #77ffc0;
     height: 60px;
     width: 75px;
     margin: 5px;
@@ -57,7 +49,7 @@ body {
 }
 
 .armario.selecionado{
-    background-color: green;
+    background-color: rgb(224, 132, 10);
 }
 
 div.row small{
@@ -71,75 +63,18 @@ div.row {
     
 }
 
+div.row img{
+    width: 100%;
+}
+
 div.row .armario.vendido small{
     color: black;
 }
 
 .armario.vendido{
-    background-color: white;
+    background-color:rgb(139, 0, 0);
 }
 
-
-.armario.quebrado{
-    background-color: rgb(63, 0, 0);
-}
-
-
-.armario:nth-of-type(2){
-    margin-right: 18px;
-}
-
-.armario:nth-last-of-type(2){
-    margin-left: 18px;
-}
-
-.armario:not(.vendido):hover{
-    cursor:pointer;
-    transform: scale(1,1.3);
-
-}
-
-.showcase .armario:not(.vendido):hover,.armario.quebrado:hover{
-    cursor: default;
-    transform: scale(1);
-}
-
-.showcase{
-    background: rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #777;
-    list-style-type: none;
-     display: flex; 
-     justify-content: space-between;
-     align-self: baseline;
-     margin-left: 40px;
-}
-
-.showcase li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-}
-
-.showcase li small{
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 3px;
-    align-items: center;
-    font-size: 12px;
-    justify-content: center;
-}
-
-.row{
-    display: flex;
-}
-
-p.text{
-    margin: 5px 0;
-}
-
-p.text.span{
-    color: green;
+.armario.indisponivel{
+    background-color: #696969;
 }
