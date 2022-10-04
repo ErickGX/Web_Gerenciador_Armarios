@@ -103,13 +103,13 @@ body {
     display: flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    padding: 1.3rem 0rem ; /*alterei aqui para mexer na altura e no espaço dos campos */
+    padding: 1.1rem 0.1rem ; /*alterei aqui para mexer na altura e no espaço dos campos */
 }
 
 .input-box{
     display: flex;
     flex-direction: column;
-    margin-bottom: 0rem;/*Alterei aqui e diminuiu os campos*/
+    margin-bottom: 1rem;/*Alterei aqui aumenta e diminui os espaçoes entre os campos*/
     border-radius: 10px;
 }
 
