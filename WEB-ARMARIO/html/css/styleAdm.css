@@ -12,7 +12,12 @@ body {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-
+.span-required{
+    font-size:12px;
+    margin: 3px 0 0 1px; 
+    display: none;
+    color: red;
+}
 .main-login{
 	width: 100vw;
 	height: 100vh;

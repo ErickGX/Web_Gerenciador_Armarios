@@ -23,14 +23,19 @@
 
 				<div class="form">
 					
-					<label for="RM">CPF:</label>
-					<input type="number" name="RM" placeholder="RM">
+					<label for="cpf" class="form-label">CPF</label>
+					<input type="number" name="cpf" id="cpf" placeholder="DIGITE SEU CPF" class="input required" oninput="cpfValidate();">
+
+					<span class="span-required">CPF invalido</span>
 
 				</div>
 				<div class="form">
 
-					<label for="senha">Senha:</label>
-					<input type="password" name="senha" placeholder="Senha">
+					<label for="password" class="form-label">Senha</label>
+					<input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required" oninput="senhaValidate();" >
+					
+					<span class="span-required">Senha com no mínimo 8 caracteres</span>
+
 
 				</div>
 
@@ -42,7 +47,52 @@
 		
 
 
-	</div><!--main-login-->
+	</div>
+
+	<script>
+	const formu = document.getElementById('form');
+	const campos = document.querySelectorAll('.required');
+	const spans = document.querySelectorAll('.span-required');
+	const cpfRegex = /^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/;
+
+
+	formu.addEventListener('submit', event => {
+        event.preventDefault();	
+		senhaValidate();
+		cpfValidate(); 
+	});
+	function setError(index){
+        campos[index].style.border='1px solid #e63636';
+        spans[index].style.display = 'Block';
+    }
+
+    function RemoveError(index){
+        campos[index].style.border='';
+        spans[index].style.display = 'none';
+    }
+
+	function senhaValidate(){
+         if (campos[1].value.length<8)
+         {
+             setError(1);
+         }
+         else
+         {
+             RemoveError(1);
+         }
+     }
+
+	 function cpfValidate(){
+        if (cpfRegex.test(campos[0].value))
+        {
+            RemoveError(0);
+        }
+        else
+        {
+           setError(0);
+        }
+    }
+	</script>
 
 </body>
 </html>
