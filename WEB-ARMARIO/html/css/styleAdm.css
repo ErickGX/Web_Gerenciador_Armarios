@@ -148,7 +148,7 @@ input[type="number"] {
 
 @media only screen and (max-width:  768px){
 	.card-login{
-		width: 1%;
+		width: 100%;/*estava 1%/certo 100%*/
 		height: auto;
 	}
 }
