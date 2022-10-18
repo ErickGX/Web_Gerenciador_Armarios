@@ -18,15 +18,15 @@
 
 				<div class="form">
 					
-					<label for="cpf">CPF:</label>
-					<input type="number" name="cpf" placeholder="Digite cpf valido" oninput="cpfValidate();">
+					<label for="cpf">CPF</label>
+                    <input type="number" name="cpf" id="cpf" placeholder="DIGITE SEU CPF" class="input required" oninput="cpfValidate();" max="11"/>
 
                     <span class="span-required">CPF invalido</span>
 				</div>
 				<div class="form">
 
-					<label for="senha">Senha:</label>
-					<input type="password" name="senha" placeholder="Senha">
+					<label for="senha">Senha</label>
+					<input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required" oninput="senhaValidate();" >
 
                     <span class="span-required">Senha com no mínimo 8 caracteres</span>
 				</div>
