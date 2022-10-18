@@ -31,8 +31,7 @@ button.voltar{
 .containerDeArea{
     margin: 20px 0;
 }
-
-.containerDeArea select{
+.select{
     background-color: #fff;
     border: 0;
     border-radius: 5px;
@@ -43,13 +42,24 @@ button.voltar{
    
 }
 
-.containerDeArmarios{
-    perspective: 1000px;
+.dados{
+    display: none;
+}
+
+
+.mostrar{
+    display: block;
+}
+
+.tela{
+    display: inline-block;
+}
+.conteudo{
+    margin-top: 10px;
     margin-bottom: 30px;
     background-color: #2f2841;
     padding: 50px;
     border-radius: 5px;
-    margin-left: 20%;
     float: right;
 }
 
@@ -101,10 +111,6 @@ div.row .armario.vendido small{
     margin-left: 18px;
 }
 
-ul.legendas li{
-    cursor: default;
-    transform: default;
-}
 
 .armario.selecionado:hover{
     cursor: pointer;
@@ -160,13 +166,13 @@ ul.legendas p{
     border-radius: 5px;
     color: #777;
    display: flex;
-   
+   position: fixed;
     float: left;
     justify-content: center;
     align-items: center;
     flex-direction: column;;
-   margin-left: 40px;
    margin-right: 80%;
+   margin-top: 500px;
 }
 
 .legendas li{
@@ -196,7 +202,7 @@ p.text.span{
     color: green;
 }
 
-button{
+button.alugar{
     background-color: #00ff88;
     border-radius: 5px;
     height: 50px;
@@ -204,5 +210,9 @@ button{
     margin: 10px;
     align-self: flex-end;
     font-weight: bold;
+
+
 }
+
+
 

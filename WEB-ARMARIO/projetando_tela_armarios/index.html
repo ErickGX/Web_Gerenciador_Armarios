@@ -6,93 +6,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     <title>Tela de Armários</title>
 </head>
+<body>
+    <button type="button" class="voltar" id="tela" > Voltar </button>
 
-    <button type="button" class="voltar" id="voltar" > Voltar </button>
+    <select name="armarios" id="select" class="select">
+        <option value="000"> selecione uma area</option>
+        <option value="area1"> Laboratórios de Quimica</option>
+        <option value="area2"> Laboratórios de Nutrição </option>
+        <option value="area3"> Salas de Administração </option>
+    </select>
+   
 
-    <div class="containerDeArea">
-        <label> Selecione a área do armário desejado </label>
-        <select id="proximidade">
-            <option id="Quimica"> Laboratório de Química </option>
-            <option id="Nutricao"> Laboratório de Nutrição </option>
-            <option id="Adm"> Salas de Administração </option>
-            
-        </select>
-    </div>
+        <div class="conteudo" id="tela">
 
-    <div class = "containerDeArmarios" id="CDA">
+            <div id="000" class="dados">
+    
+                <div class = "row">
+                    <div class="armario vendido"> <small> A1 </small> </div>
+                    <div class="armario vendido"> <small> A2 </small> </div>
+                    <div class="armario vendido"> <small> A3 </small> </div>
+                    <div class="armario vendido"> <small> A4 </small> </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario vendido"> <small>A5 </small> </div>
+                    <div class="armario indisponivel"> <small> A6 </small> </div>
+                    <div class="armario disponivel"> <small> A7 </small> </div>
+                    <div class="armario vendido"> <small> A8 </small> </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario disponivel"> <small> A9 </small> </div>
+                    <div class="armario disponivel"> <small> A10 </small> </div>
+                    <div class="armario disponivel"> <small> A11 </small> </div>
+                    <div class="armario disponivel"> <small> A12 </small> </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario indisponivel"><small> A13 </small> </div>
+                    <div class="armario vendido"> <small> A14 </small> </div>
+                    <div class="armario vendido"> <small> A15 </small> </div>
+                    <div class="armario vendido"> <small> A16 </small>  </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario vendido"> <small> A17 </small>  </div>
+                    <div class="armario vendido"> <small> A18 </small>  </div>
+                    <div class="armario vendido"> <small> A19 </small>  </div>
+                    <div class="armario disponivel"> <small> A20 </small>  </div>
+                </div>
+    
+            </div>
+
+            <div id="quimica" class="dados">
+    
+                <div class = "row">
+                    <div class="armario vendido"> <small> A1 </small> </div>
+                    <div class="armario vendido"> <small> A2 </small> </div>
+                    <div class="armario vendido"> <small> A3 </small> </div>
+                    <div class="armario vendido"> <small> A4 </small> </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario vendido"> <small>A5 </small> </div>
+                    <div class="armario indisponivel"> <small> A6 </small> </div>
+                    <div class="armario disponivel"> <small> A7 </small> </div>
+                    <div class="armario vendido"> <small> A8 </small> </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario disponivel"> <small> A9 </small> </div>
+                    <div class="armario disponivel"> <small> A10 </small> </div>
+                    <div class="armario disponivel"> <small> A11 </small> </div>
+                    <div class="armario disponivel"> <small> A12 </small> </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario indisponivel"><small> A13 </small> </div>
+                    <div class="armario vendido"> <small> A14 </small> </div>
+                    <div class="armario vendido"> <small> A15 </small> </div>
+                    <div class="armario vendido"> <small> A16 </small>  </div>
+                </div>
+                
+                <div class = "row">
+                    <div class="armario vendido"> <small> A17 </small>  </div>
+                    <div class="armario vendido"> <small> A18 </small>  </div>
+                    <div class="armario vendido"> <small> A19 </small>  </div>
+                    <div class="armario disponivel"> <small> A20 </small>  </div>
+                </div>
+    
+            </div>
+    
+    
+    
+            <div id="nutri" class="dados">
+    
+                <div class = "row">
+                    <div class="armario disponivel"> <small> B1 </small> </div>
+                    <div class="armario disponivel"> <small> B2 </small> </div>
+                    <div class="armario disponivel"> <small> B3 </small> </div>
+                    <div class="armario disponivel"> <small> B4 </small> </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario vendido"> <small>A5 </small> </div>
+                    <div class="armario indisponivel"> <small> A6 </small> </div>
+                    <div class="armario disponivel"> <small> A7 </small> </div>
+                    <div class="armario vendido"> <small> A8 </small> </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario disponivel"> <small> A9 </small> </div>
+                    <div class="armario disponivel"> <small> A10 </small> </div>
+                    <div class="armario disponivel"> <small> A11 </small> </div>
+                    <div class="armario disponivel"> <small> A12 </small> </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario indisponivel"><small> A13 </small> </div>
+                    <div class="armario vendido"> <small> A14 </small> </div>
+                    <div class="armario vendido"> <small> A15 </small> </div>
+                    <div class="armario vendido"> <small> A16 </small>  </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario vendido"> <small> A17 </small>  </div>
+                    <div class="armario vendido"> <small> A18 </small>  </div>
+                    <div class="armario vendido"> <small> A19 </small>  </div>
+                    <div class="armario disponivel"> <small> A20 </small>  </div>
+                </div>
+    
+            </div>
+    
+    
+    
+    
+            <div id="adm" class="dados">
+                <div class = "row">
+                    <div class="armario indisponivel"> <small> C1 </small> </div>
+                    <div class="armario indisponivel"> <small> C2 </small> </div>
+                    <div class="armario indisponivel"> <small> C3 </small> </div>
+                    <div class="armario indisponivel"> <small> C4 </small> </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario vendido"> <small>A5 </small> </div>
+                    <div class="armario indisponivel"> <small> A6 </small> </div>
+                    <div class="armario disponivel"> <small> A7 </small> </div>
+                    <div class="armario vendido"> <small> A8 </small> </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario disponivel"> <small> A9 </small> </div>
+                    <div class="armario disponivel"> <small> A10 </small> </div>
+                    <div class="armario disponivel"> <small> A11 </small> </div>
+                    <div class="armario disponivel"> <small> A12 </small> </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario indisponivel"><small> A13 </small> </div>
+                    <div class="armario vendido"> <small> A14 </small> </div>
+                    <div class="armario vendido"> <small> A15 </small> </div>
+                    <div class="armario vendido"> <small> A16 </small>  </div>
+                </div>
+    
+                <div class = "row">
+                    <div class="armario vendido"> <small> A17 </small>  </div>
+                    <div class="armario vendido"> <small> A18 </small>  </div>
+                    <div class="armario vendido"> <small> A19 </small>  </div>
+                    <div class="armario disponivel"> <small> A20 </small>  </div>
+                </div>
+            </div>    
+    
+        </div>
         
-            <div class = "row">
-                <div class="armario disponivel"> <small> A1 </small> </div>
-                <div class="armario disponivel"> <small> A2 </small> </div>
-                <div class="armario vendido"> <small> A3 </small> </div>
-                <div class="armario disponivel"> <small> A4 </small> </div>
-            </div>
-
-            <div class = "row">
-                <div class="armario vendido"> <small>A5 </small> </div>
-                <div class="armario indisponivel"> <small> A6 </small> </div>
-                <div class="armario disponivel"> <small> A7 </small> </div>
-                <div class="armario vendido"> <small> A8 </small> </div>
-            </div>
-
-            <div class = "row">
-                <div class="armario disponivel"> <small> A9 </small> </div>
-                <div class="armario disponivel"> <small> A10 </small> </div>
-                <div class="armario disponivel"> <small> A11 </small> </div>
-                <div class="armario disponivel"> <small> A12 </small> </div>
-            </div>
-
-            <div class = "row">
-                <div class="armario indisponivel"><small> A13 </small> </div>
-                <div class="armario vendido"> <small> A14 </small> </div>
-                <div class="armario vendido"> <small> A15 </small> </div>
-                <div class="armario vendido"> <small> A16 </small>  </div>
-            </div>
-
-            <div class = "row">
-                <div class="armario vendido"> <small> A17 </small>  </div>
-                <div class="armario vendido"> <small> A18 </small>  </div>
-                <div class="armario vendido"> <small> A19 </small>  </div>
-                <div class="armario disponivel"> <small> A20 </small>  </div>
-            </div>
-    </div>
+        <ul class="legendas" id="tela">
+            <li>
+                <div class = "lgnd disponivel">
+                </div>
+                <p> Disponível </p>
+    
+            </li>
+    
+            <li>
+                <div class = "lgnd selecionado">
+                </div>
+                <p> Selecionado</p>
+    
+            </li>
+    
+            <li>
+                <div class = "lgnd vendido">
+                </div>
+                <p> Vendido </p>
+    
+            </li>
+    
+            <li>
+                <div class = "lgnd indisponivel">
+                </div>
+                <p> Indisponível </p>
+            </li>
+        </ul>
 
 
-    <ul class="legendas">
-        <li>
-            <div class = "lgnd disponivel">
-            </div>
-            <p> Disponível </p>
-
-        </li>
-
-        <li>
-            <div class = "lgnd selecionado">
-            </div>
-            <p> Selecionado</p>
-
-        </li>
-
-        <li>
-            <div class = "lgnd vendido">
-            </div>
-            <p> Vendido </p>
-
-        </li>
-
-        <li>
-            <div class = "lgnd indisponivel">
-            </div>
-            <p> Indisponível </p>
-        </li>
-    </ul>
+    
+        
+    
 
     <script src="script.js"></script>
 
-    <button type="button" id="alugar" > Alugar </button>
+    <button type="button" class="alugar" id="tela" > Alugar </button>
 
     
 
