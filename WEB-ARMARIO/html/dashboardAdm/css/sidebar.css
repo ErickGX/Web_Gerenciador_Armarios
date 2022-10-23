@@ -1,0 +1,21 @@
+div.flex-dashboard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    display: block;
+    height: 100%;
+    width: 300px;
+    background-color: black;
+} 
+
+.main {
+    display: block;
+    height: 100%;
+    background-color: #ccc;
+} 
+
+/*https://www.youtube.com/watch?v=0MY0B_BjQOw deu b.o aqui no css, ainda não encontrei o erro*/
