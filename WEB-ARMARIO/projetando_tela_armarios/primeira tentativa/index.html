@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>TEla de Armários</title>
+</head>
+
+<body>
+    <div class="movie-container">
+        <label> Selecione uma Área: </label>
+        <select id="area">
+            <option value="220"> 1º andar  </option>
+            <option value="320"> 2º andar  </option>
+           
+
+        </select>
+    </div>
+
+   
+    <div class="container">
+
+        <div class="row">
+            <div class="armario vendido"> <small> A1 </small> </div>
+            <div class="armario vendido"> <small> A2 </small> </div>
+            <div class="armario disponivel"> <small> A3 </small> </div>
+            <div class="armario disponivel"> <small> A4 </small> </div>
+                  
+        </div>
+
+        <div class="row">
+            <div class="armario quebrado"></div>
+            <div class="armario disponivel"></div>
+            <div class="armario vendido"></div>
+            <div class="armario disponivel"></div>
+                       
+        </div>
+
+        <div class="row">
+            <div class="armario disponivel"></div>
+            <div class="armario disponivel"></div>
+            <div class="armario quebrado"></div>
+            <div class="armario vendido"></div>
+                       
+        </div>
+
+        <div class="row">
+            <div class="armario disponivel"></div>
+            <div class="armario quebrado"></div>
+            <div class="armario disponivel"></div>
+            <div class="armario disponivel"></div>
+            
+        </div>
+
+        <div class="row">
+            <div class="armario disponivel"></div>
+            <div class="armario quebrado"></div>
+            <div class="armario disponivel"></div>
+            <div class="armario disponivel"></div>
+            
+        </div>
+
+    </div>
+
+    <!-- <p class="text">
+        You have selected <span id="count">0</span> armario disponivel for a price of R$.<span id="total">0</span>
+    </p> -->
+
+
+    <ul class="showcase">
+        <li>
+            <div class="armario disponivel">
+                <small> Disponivel </small>
+            </div>
+        </li>
+        <li>
+            <div class="armario selecionado">
+                <small> Selecionado </small>
+            </div>
+        </li>
+        <li>
+            <div class="armario vendido">
+                <small> Ocupado </small>
+            </div>
+        </li>
+        <li>
+            <div class="armario quebrado">
+                <small> Indisponível </small>
+            </div>
+        </li>
+    </ul>
+  
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

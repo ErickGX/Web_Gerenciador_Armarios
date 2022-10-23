@@ -1,74 +1,56 @@
-const container = document.querySelector(".container");
-const armarios = document.querySelectorAll(".row .armario:not(.vendido)");
-const count = document.getElementById("count");
-const total = document.getElementById("total");
-const areaSelect = document.getElementById("area");
 
-populateUI();
+$('.select').change(function(){
+    var optionID = $(this).val();
+    if(optionID =="area1"){
+        $('#quimica').removeClass("dados");
+        $('#quimica').addClass("mostrar");
+    
+    }else{
+        $('#quimica').removeClass("mostrar");
+        $('#quimica').addClass("dados");
+    }
 
-let ticketPrice = +areaSelect.value;
+    if(optionID =="area2"){
+        $('#nutri').removeClass("dados");
+        $('#nutri').addClass("mostrar");
+    
+    }else{
+        $('#nutri').removeClass("mostrar");
+        $('#nutri').addClass("dados");
+    }
 
-// Save selected area index and price
-function setareaData(areaIndex, areaPrice) {
-  localStorage.setItem("selectedareaIndex", areaIndex);
-  localStorage.setItem("selectedareaPrice", areaPrice);
-}
+    if(optionID =="area3"){
+        $('#adm').removeClass("dados");
+        $('#adm').addClass("mostrar");
+    
+    }else{
+        $('#adm').removeClass("mostrar");
+        $('#adm').addClass("dados");
+    }
 
-// Update total and count
-// function updateSelectedCount() {
-//   const selectedarmarios = document.querySelectorAll(".row .armario.selecionado");
+    if(optionID =="000"){
+    
+        $('#quimica').removeClass("mostrar");
+        $('#quimica').addClass("dados");
+        
+        $('#nutri').removeClass("mostrar");
+        $('#nutri').addClass("dados");
 
-//   const armariosIndex = [...selectedarmarios].map((armario) => [...armarios].indexOf(armario));
-
-//   localStorage.setItem("selectedarmarios", JSON.stringify(armariosIndex));
-
-//   const selectedarmariosCount = selectedarmarios.length;
-
-//   count.innerText = selectedarmariosCount;
-//   total.innerText = selectedarmariosCount * ticketPrice;
-
-//   setareaData(areaSelect.selectedIndex, areaSelect.value);
-// }
+        $('#adm').removeClass("mostrar");
+        $('#adm').addClass("dados");
+    
+    }
 
 
-// Get data from localstorage and populate UI
-function populateUI() {
-  const selectedarmarios = JSON.parse(localStorage.getItem("selectedarmarios"));
-
-  if (selectedarmarios !== null && selectedarmarios.length > 0) {
-    armarios.forEach((armario, index) => {
-      if (selectedarmarios.indexOf(index) > -1) {
-        console.log(armario.classList.add("selected"));
-      }
-    });
-  }
-
-  const selectedareaIndex = localStorage.getItem("selectedareaIndex");
-
-  if (selectedareaIndex !== null) {
-    areaSelect.selectedIndex = selectedareaIndex;
-    console.log(selectedareaIndex)
-  }
-}
-console.log(populateUI())
-// area select event
-// areaSelect.addEventListener("change", (e) => {
-//   ticketPrice = +e.target.value;
-//   setareaData(e.target.selectedIndex, e.target.value);
-//   updateSelectedCount();
-// });
-
-// armario click event
-container.addEventListener("click", (e) => {
-  if (
-    e.target.classList.contains("armario") &&
-    !e.target.classList.contains("vendido")
-  ) {
-    e.target.classList.toggle("selecionado");
-
-    //updateSelectedCount();
-  }
+    console.log(responseID);
 });
 
-// Initial count and total set
-// updateSelectedCount();
+
+$('.armario').click(function(){
+    if (divClass == "armario.disponivel"){
+        $('.armario').removeClass("armario.disponivel");
+        $('.armario').addClass("armario.selecionado");
+    }
+});
+
+
