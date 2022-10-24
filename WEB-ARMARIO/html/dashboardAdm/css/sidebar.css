@@ -5,14 +5,14 @@ div.flex-dashboard {
     height: 100%;
 }
 
-.sidebar {
+sidebar {
     display: block;
     height: 100%;
     width: 300px;
     background-color: black;
 } 
 
-.main {
+main {
     display: block;
     height: 100%;
     background-color: #ccc;
