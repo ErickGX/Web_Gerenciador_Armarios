@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    
 }
 
 body {
@@ -14,6 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     background:  #201b2c;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .title{
@@ -40,6 +41,7 @@ body {
     margin: 3px 0 0 1px; 
     display: none;
     color: red;
+    height: 8px;
 }
 /* Erro de duplo width  na div da imagem */
 /* .form-image {
@@ -115,7 +117,7 @@ body {
 
 .input-box input{
     margin: 0.6rem 2; /*corrigi o erro de enviar o forms/ aqui altera a altura dos botons */
-    padding: 0.8rem 1.2rem; /*altera o tamamho dos campos */
+    padding: 0.6rem 1.2rem; /*altera o tamamho dos campos */
     border: none;
     border-radius: 15px; /*altera as bordas dos campos */
     box-shadow: 5px 5px 10px; /*alterei a sombra dos campos*/
