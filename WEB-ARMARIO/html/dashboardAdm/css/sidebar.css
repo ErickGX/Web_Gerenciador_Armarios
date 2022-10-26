@@ -41,11 +41,11 @@ sidebar .sidebar-title{
     border: 1px solid rgba(0,0,0,.0625);
     border-right: 0px; /*parei no 14:52 https://www.youtube.com/watch?v=0MY0B_BjQOw */
 }
-sidebar .sidebar-title img{
-    height: 40px;
-    width: 40px;
+sidebar .sidebar-title img{ /*altera tamamho da img*/
+    height: 50px;
+    width: 50px;
 }
-sidebar .sidebar-title h2{
+sidebar .sidebar-title h2{ /*altera tamamho da h2/ ver depois um logo sem escrita locketec*/
     font-size: 16px;
     margin-top: 8px;
 }
