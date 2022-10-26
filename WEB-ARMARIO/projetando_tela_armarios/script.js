@@ -45,12 +45,8 @@ $('.select').change(function(){
     console.log(responseID);
 });
 
+$('#armario.disponivel').addClass('MyClass');
 
-$('.armario').click(function(){
-    if (divClass == "armario.disponivel"){
-        $('.armario').removeClass("armario.disponivel");
-        $('.armario').addClass("armario.selecionado");
-    }
-});
+$('#MyElement').removeClass('MyClass');
 
 

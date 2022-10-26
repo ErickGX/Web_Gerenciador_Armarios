@@ -10,9 +10,6 @@
 <body>
     <div class="container">
 <!--b.o no css, ver isso amanhã-->
-        <div class="form-image">
-            <img src="img/undraw_security_re_a2rk.svg" width="50%" height="100%" alt="img/testeimagem.jpg"/>
-        </div>
        
         <div class="form" >
             <form action="#" id="Forms">
@@ -31,6 +28,13 @@
                     <div class="input-box">
                         <label for="firstname" class="form-label" >Nome</label>
                         <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" class="input required" oninput="nameValidate();">
+                        
+                        <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+
+                    </div>
+                    <div class="input-box">
+                        <label for="lastname" class="form-label" >Sobrenome</label>
+                        <input type="text" name="Name" id="lastname" placeholder="DIGITE SEU SOBRENOME" class="input required" oninput="sobreValidate();">
                         
                         <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
 
@@ -92,28 +96,26 @@
                             <option value="administração">Desenvolvimento de Sistemas</option>
                         </select>
                     </div>
-
-                </div>
-
-                <div class="periodo-inputs">
-                    <div class="periodo-title">
-                        <h6>PERÍODO</h6>
-                    </div>
-
-                    <div class="periodo-group">
-                        <div class="periodo-input">
-                            <input type="radio" name="periodo" id="integral">
-                            <label for="integral">Integral</label>
+                    <div class="periodo-inputs">
+                        <div class="periodo-title">
+                            <h6>PERÍODO</h6>
                         </div>
-
-                        <div class="periodo-input">
-                            <input type="radio" name="periodo" id="tarde">
-                            <label for="tarde">Tarde</label>
-                        </div>
-
-                        <div class="periodo-input">
-                            <input type="radio" name="periodo" id="noite">
-                            <label for="noite">Noite</label>
+    
+                        <div class="periodo-group">
+                            <div class="periodo-input">
+                                <input type="radio" name="periodo" id="integral">
+                                <label for="integral">Integral</label>
+                            </div>
+    
+                            <div class="periodo-input">
+                                <input type="radio" name="periodo" id="tarde">
+                                <label for="tarde">Tarde</label>
+                            </div>
+    
+                            <div class="periodo-input">
+                                <input type="radio" name="periodo" id="noite">
+                                <label for="noite">Noite</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,7 +144,8 @@
         TelValidate();
         emailValidate();
         rmValidate();
-        cpfValidate(); 
+        cpfValidate();
+        sobreValidate(); 
     }
     );
 
@@ -167,65 +170,76 @@
         }
     }
 
-    function rmValidate(){
-        if(campos[1].value.length==5)
+    function sobreValidate(){
+        if (campos[1].value.length<3)
+        {
+            setError(1);
+        } 
+        else
         {
             RemoveError(1);
         }
+    }
+
+    function rmValidate(){
+        if(campos[2].value.length==5)
+        {
+            RemoveError(2);
+        }
         else
         {
-            setError(1);
+            setError(2);
         }
     }
 
      function senhaValidate(){
-         if (campos[2].value.length<8)
+         if (campos[3].value.length<8)
          {
-             setError(2);
+             setError(3);
          }
          else
          {
-             RemoveError(2);
+             RemoveError(3);
          }
      }
         //corrigido bug da array , tava comparando a arr3 com a arr1 , a certa é 3==2
      function confirmValidate(){
-         if (campos[3].value==campos[2].value){
-             RemoveError(3);
+         if (campos[4].value==campos[3].value){
+             RemoveError(4);
          }
          else{
-             setError(3);
+             setError(4);
          }
 
      }
 
      function TelValidate(){
-         if(campos[4].value.length==11){
-            RemoveError(4);
+         if(campos[5].value.length==11){
+            RemoveError(5);
     }
         else{
-            setError(4);
+            setError(5);
         }
      }
 
      function emailValidate(){
-        if (emailRegex.test(campos[5].value))
-        {
-            RemoveError(5);
-        }
-        else
-        {
-           setError(5);
-        }
-    }
-    function cpfValidate(){
-        if (cpfRegex.test(campos[6].value))
+        if (emailRegex.test(campos[6].value))
         {
             RemoveError(6);
         }
         else
         {
            setError(6);
+        }
+    }
+    function cpfValidate(){
+        if (cpfRegex.test(campos[7].value))
+        {
+            RemoveError(7);
+        }
+        else
+        {
+           setError(7);
         }
     }
 

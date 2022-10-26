@@ -16,14 +16,14 @@
 
 				<h1>LockEtec  <h2>Administração<h2> </h1>
 
-				<div class="form">
+				<div class="form" id="Forms">
 					
 					<label for="cpf">CPF</label>
                     <input type="number" name="cpf" id="cpf" placeholder="DIGITE SEU CPF" class="input required" oninput="cpfValidate();" max="11"/>
 
                     <span class="span-required">CPF invalido</span>
 				</div>
-				<div class="form">
+				<div class="form" id="Forms">
 
 					<label for="senha">Senha</label>
 					<input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required" oninput="senhaValidate();" >
@@ -41,48 +41,51 @@
 
 	</div><!--main-login-->
     <script>
-        const form= document.getElementById('form');
-        const campos = document.querySelectorAll('.required');
-        const spans = document.querySelectorAll('.span-required');
-        const cpfRegex = /^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/;
-    
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();	
-            senhaValidate();
-            cpfValidate(); 
-        }
-        );
-        function setError(index){
-            campos[index].style.border='1px solid #e63636';
-            spans[index].style.display = 'Block';
-        }
-    
-        function RemoveError(index){
-            campos[index].style.border='';
-            spans[index].style.display = 'none';
-        }
-    
-        function senhaValidate(){
-             if (campos[1].value.length<8)
-             {
-                 setError(1);
-             }
-             else
-             {
-                 RemoveError(1);
-             }
+   const form = document.getElementById('Forms');
+    const campos = document.querySelectorAll('.required');
+    const spans = document.querySelectorAll('.span-required');
+    const cpfRegex = /^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/;
+
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        senhaValidate();
+        cpfValidate(); 
+    }
+    );
+
+    function setError(index){
+        campos[index].style.border='1px solid #e63636';
+        spans[index].style.display = 'Block';
+    }
+
+    function RemoveError(index){
+        campos[index].style.border='';
+        spans[index].style.display = 'none';
+    }
+   
+     function senhaValidate(){
+         if (campos[1].value.length<8)
+         {
+             setError(1);
          }
+         else
+         {
+             RemoveError(1);
+         }
+     }
     
-         function cpfValidate(){
-            if (cpfRegex.test(campos[0].value))
-            {
-                RemoveError(0);
-            }
-            else
-            {
-               setError(0);
-            }
+    function cpfValidate(){
+        if (cpfRegex.test(campos[0].value))
+        {
+            RemoveError(0);
         }
-        </script>
+        else
+        {
+           setError(0);
+        }
+    }
+
+     </script>
 </body>
 </html>
