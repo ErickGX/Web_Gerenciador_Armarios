@@ -41,7 +41,7 @@ main {
     color: #6e8efb;
     height: 30px;
     width:  35px;
-     /* padding para alterar a posição do icone*/
+    padding-left: 2rem;/* padding para alterar a posição do icone*/
 }
 sidebar .sidebar-title{
     display: flex;
@@ -56,6 +56,7 @@ sidebar .sidebar-title{
 sidebar .sidebar-title img{ /*altera tamamho da img*/
     height: 90px;
     width: 90px; 
+    
 }
 sidebar .sidebar-title h2{ /*altera tamamho da h2/ ver depois um logo sem escrita locketec*/
     font-size: 16px;
