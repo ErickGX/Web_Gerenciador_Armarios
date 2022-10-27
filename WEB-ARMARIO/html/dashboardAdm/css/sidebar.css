@@ -2,7 +2,7 @@ div.flex-dashboard {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 sidebar {
@@ -10,7 +10,6 @@ sidebar {
     height: 100%;
     width: 300px;
     background-color: white;
-    border: 1px solid rgba(0,0,0,.0625);
 } 
 
 main {
@@ -31,9 +30,22 @@ main {
     border: 1px solid rgba(0,0,0,.0625);
 }
 
+.flex-dashboard header a{
+    text-decoration: none; 
+    color: #72777a;
+    height: 30px;
+    width: 100px;
+}
+
+.flex-dashboard header svg{
+    color: #6e8efb;
+    height: 30px;
+    width:  35px;
+     /* padding para alterar a posição do icone*/
+}
 sidebar .sidebar-title{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*usada para colocar o menu para baixo*/
     justify-content: center;
     align-items: center;
     padding: 10px 30px ;
@@ -42,11 +54,24 @@ sidebar .sidebar-title{
     border-right: 0px; /*parei no 14:52 https://www.youtube.com/watch?v=0MY0B_BjQOw */
 }
 sidebar .sidebar-title img{ /*altera tamamho da img*/
-    height: 50px;
-    width: 50px;
+    height: 90px;
+    width: 90px; 
 }
 sidebar .sidebar-title h2{ /*altera tamamho da h2/ ver depois um logo sem escrita locketec*/
     font-size: 16px;
-    margin-top: 8px;
+    margin-top: -5px;
+}
+div.menu{
+    border-right: 1px solid rgba(0,0,0,.0625);
+}
+
+div.menu ul{
+    list-style-type:none;
+}
+
+div.menu ul li{
+    border: 1px solid red;  
+    padding: 0 20px;
+    width: 100%;
 }
 /*https://www.youtube.com/watch?v=0MY0B_BjQOw deu b.o aqui no css, ainda não encontrei o erro*/
