@@ -84,10 +84,12 @@ body*{
 	margin-bottom: 10px;
 
 }
-.bnt-login{
+.button-logar button{
 	width: 100%;
-	padding: 16px 0px;
-	margin: 10px;
+	display:flex;
+	align-items: center;
+	padding: 16px 0%;
+	margin-top : 10px;
 	border: none;
 	border-radius: 8px;
 	outline: none;
@@ -99,11 +101,14 @@ body*{
 	cursor: pointer;
 	box-shadow: 0px 10px 40px -12px #00ff0052;
 }
-a{
+.esqueci{
 	color: #00ff88;
 	margin: 10px;
 }
 
+.button-logar button:hover{
+    background-color: #0ae9e9;
+}
 /* //Codigo para esconder arrows(setas) dos campos int's Erick-- */
 
 input[type="number"]::-webkit-outer-spin-button,

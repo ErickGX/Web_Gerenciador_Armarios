@@ -23,32 +23,32 @@
                     </div>
 
                 </div>
-
+                
                 <div class="input-group">
                     <div class="input-box">
                         <label for="firstname" class="form-label" >Nome</label>
-                        <input type="text" name="Name" id="firstname" placeholder="DIGITE SEU NOME" class="input required" oninput="nameValidate();">
+                        <input type="text" name="nome" id="firstname" placeholder="DIGITE SEU NOME" class="input required" oninput="nameValidate();">
                         
                         <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
 
                     </div>
                     <div class="input-box">
                         <label for="lastname" class="form-label" >Sobrenome</label>
-                        <input type="text" name="Name" id="lastname" placeholder="DIGITE SEU SOBRENOME" class="input required" oninput="sobreValidate();">
+                        <input type="text" name="sobrenome" id="lastname" placeholder="DIGITE SEU SOBRENOME" class="input required" oninput="sobreValidate();">
                         
                         <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
 
                     </div>
                     <div class="input-box">
                         <label for="RM">RM</label>
-                        <input type="number" name="RM" id="number" placeholder="ex:21134" class="input required" oninput="rmValidate();"> 
+                        <input type="number" name="rm" id="number" placeholder="ex:21134" class="input required" oninput="rmValidate();"> 
                         
                         <span class="span-required">Digite um RM validos</span>
                     </div>
 
                     <div class="input-box">
                         <label for="password" class="form-label">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="DIGITE UMA SENHA" class="input required" oninput="senhaValidate();" >
+                        <input type="password" name="senha" id="password" placeholder="DIGITE UMA SENHA" class="input required" oninput="senhaValidate();" >
                         
                         <span class="span-required">Senha com no mínimo 8 caracteres</span>
 
@@ -56,7 +56,7 @@
 
                     <div class="input-box">
                         <label for="password" class="form-label">Confirmação/senha</label>
-                        <input type="password" name="password" id="confirmpassword" placeholder="CONFIRME SUA SENHA" class="input required" oninput="confirmValidate();">
+                        <input type="password" name="confsenha" id="confirmpassword" placeholder="CONFIRME SUA SENHA" class="input required" oninput="confirmValidate();">
                         
                         <span class="span-required">Senha devem ser compatíveis</span>
 
@@ -64,7 +64,7 @@
 
                     <div class="input-box">
                         <label for="number">Celular</label>
-                        <input type="number" name="Name" id="number" placeholder="(xx) xxxx-xxxx" class="input required" oninput="TelValidate();">
+                        <input type="number" name="telefone" id="number" placeholder="(xx) xxxx-xxxx" class="input required" oninput="TelValidate();">
 
                         <span class="span-required">Numero invalido</span>
 
@@ -76,6 +76,13 @@
 
                         <span class="span-required">Email invalido</span>
                     </div>
+
+                    <div class="input-box">
+                        <label for="email" class="form-label">Confirme Email</label>
+                        <input type="email" name="confemail" id="email" placeholder="DIGITE SEU EMAIL" class="input required" oninput="confirmEmail();">
+
+                        <span class="span-required">Os campos de email devem ser iguais</span>
+                    </div>
                      
                     <div class="input-box">
                         <label for="cpf" class="form-label">CPF</label>
@@ -84,7 +91,7 @@
                         <span class="span-required">CPF invalido</span>
                     </div>
 
-                    <div class="input-box">
+                    <!-- <div class="input-box">
                         <label for="cursos">Curso</label>
                         <select name="cursos" id="cursos" placeholder="ESCOLHA SEU CURSO" required>
                             <option value="administração-integral">Administração Integral</option>
@@ -96,6 +103,7 @@
                             <option value="administração">Desenvolvimento de Sistemas</option>
                         </select>
                     </div>
+                    
                     <div class="periodo-inputs">
                         <div class="periodo-title">
                             <h6>PERÍODO</h6>
@@ -117,7 +125,7 @@
                                 <label for="noite">Noite</label>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="cadastrar-button">
@@ -145,7 +153,8 @@
         emailValidate();
         rmValidate();
         cpfValidate();
-        sobreValidate(); 
+        sobreValidate();
+        confirmEmail();
     }
     );
 
@@ -232,14 +241,24 @@
            setError(6);
         }
     }
+
+    function confirmEmail(){
+         if (campos[7].value==campos[6].value){
+             RemoveError(7);
+         }
+         else{
+             setError(7);
+         }
+
+     }
     function cpfValidate(){
-        if (cpfRegex.test(campos[7].value))
+        if (cpfRegex.test(campos[8].value))
         {
-            RemoveError(7);
+            RemoveError(8);
         }
         else
         {
-           setError(7);
+           setError(8);
         }
     }
 

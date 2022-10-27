@@ -37,11 +37,11 @@
 					<input type="password" name="senha" placeholder="Senha">
 
 				</div>
-
-				<button class="bnt-login">Entrar</button>
-				<button class="bnt-login">Cadastre-se</button>
-
-				<a href="html/cadastro.html">esqueci minha senha</a>
+				<div class="button-logar">
+				<button ><a>Entrar</a></button>
+				<button ><a>Cadastre</a></button>
+			    </div>
+				<a href="html/cadastro.html" class="esqueci">esqueci minha senha</a>
 			</div>
 		</div>
 
