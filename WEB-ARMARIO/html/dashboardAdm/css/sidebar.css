@@ -9,7 +9,7 @@ sidebar {
     display: block;
     height: 100%;
     width: 300px;
-    background-color: white;
+    background-color:rgb(54, 55, 64);
 } 
 
 main {
@@ -19,30 +19,7 @@ main {
     width: calc(100% - 300px);
 } 
 
-.flex-dashboard header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    height: 90px;
-    padding: 0 30px;
-    border: 1px solid rgba(0,0,0,.0625);
-}
 
-.flex-dashboard header a{
-    text-decoration: none; 
-    color: #72777a;
-    height: 30px;
-    width: 100px;
-}
-
-.flex-dashboard header svg{
-    color: #6e8efb;
-    height: 30px;
-    width:  35px;
-    padding-left: 2rem;/* padding para alterar a posição do icone*/
-}
 sidebar .sidebar-title{
     display: flex;
     flex-direction: column; /*usada para colocar o menu para baixo*/
@@ -61,6 +38,7 @@ sidebar .sidebar-title img{ /*altera tamamho da img*/
 sidebar .sidebar-title h2{ /*altera tamamho da h2/ ver depois um logo sem escrita locketec*/
     font-size: 16px;
     margin-top: -5px;
+    color: black;
 }
 div.menu{
     border-right: 1px solid rgba(0,0,0,.0625);
@@ -68,11 +46,34 @@ div.menu{
 
 div.menu ul{
     list-style-type:none;
+    border-right: none;
 }
 
 div.menu ul li{
-    border: 1px solid red;  
-    padding: 0 20px;
+    border: none;
+    padding: 20px 20px;/*aaltera a position dos elementos dentro do menu */
     width: 100%;
+    display: flex;      /*display: flex/flex-direction:row;/align-items: center;//estão centralizando os icons */ 
+    flex-direction: row;   
+    align-items: center; 
+    border: 1px solid rgba(15, 15, 15, 0.048);
 }
+
+div.menu ul :hover{
+    /*border-left: 2px solid #6e8efb; /*barra ao lado dos nomes do menuu*/
+    color: #6e8efb;
+}
+
+
+div.menu ul li svg{
+    color: rgb(221, 226, 255);
+    font-size: 25px;
+}
+
+div.menu ul li a{
+    color: #72777a;
+    margin-left: 20px;
+    text-transform: none;
+}
+/*28:46*/
 /*https://www.youtube.com/watch?v=0MY0B_BjQOw deu b.o aqui no css, ainda não encontrei o erro*/
