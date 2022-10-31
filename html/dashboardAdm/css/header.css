@@ -1,0 +1,24 @@
+.flex-dashboard header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 90px;
+    padding: 0 30px;
+    border: 1px solid rgba(0,0,0,.0625);
+}
+
+.flex-dashboard header a{
+    text-decoration: none; 
+    color: #72777a;
+    height: 30px;
+    width: 100px;
+}
+
+.flex-dashboard header svg{
+    color: #6e8efb;
+    height: 30px;
+    width:  35px;
+    padding-left: 2rem;/* padding para alterar a posição do icone*/
+}

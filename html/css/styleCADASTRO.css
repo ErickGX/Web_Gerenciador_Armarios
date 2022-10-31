@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #201b2c;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.title{
+	color: #77ffc0;
+}
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;/*usado para centralizar o formulário*/
+    align-items: center;/*usado para centralizar o formulário
+    e retirei a border*/
+}
+/*imagem excluida*/
+
+
+.span-required{
+    font-size:12px;
+    margin: 3px 0 0 1px; 
+    display: none;
+    color: red;
+    height: 8px;
+}
+/* Erro de duplo width  na div da imagem */
+/* .form-image {
+    width: 35rem;
+} */
+
+.form {
+
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2f2841;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056
+}
+
+.form-header {
+    margin-top: 0.15rem;/*aqui sobe o form header todo */
+    display: flex;
+    justify-content:space-between; /*aqui altera as posições dos form elements */
+}
+
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button button{
+    border: none;
+    background-color: #00ff88;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.login-button button:hover{
+    background-color:#0ae9e9;
+}
+.login-button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #2b134b;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 9rem; /*aqui altera a linha de baixo do nome Cadastro*/
+    height: 0.4rem;
+    background-color:#77ffc0 ;
+    margin: 5 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding: 1.5rem 0rem ; /*alterei aqui para mexer na altura e no espaço dos campos */
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;/*Alterei aqui aumenta e diminui os espaçoes entre os campos*/
+    border-radius: 10px;
+}
+
+.input-box input{
+    margin: 0.6rem 2; /*corrigi o erro de enviar o forms/ aqui altera a altura dos botons */
+    padding: 0.6rem 1.2rem; /*altera o tamamho dos campos */
+    border: none;
+    border-radius: 15px; /*altera as bordas dos campos */
+    box-shadow: 5px 5px 10px; /*alterei a sombra dos campos*/
+}
+
+.input-box input:hover{
+    text-transform: capitalize;
+}
+
+.input-box input:focus-visible{
+    outline: 3px solid #77ffc0;
+}
+
+.input-box label,
+.periodo-title h6{
+    font-size: 0.75;
+    font-weight: 600;
+    color: white;
+}
+
+.input-box input::placeholder{
+    color: #000000be;
+}
+
+.periodo-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5;
+    padding: 0 0.5rem;
+}
+
+.periodo-input{
+    display: flex;
+    align-items: center;
+}
+
+.periodo-input input{
+    margin-right: 0.35rem;
+}
+
+.periodo-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color:#f0ffffde;
+    
+}
+
+.cadastrar-button button{
+    width: 100%;
+    margin-top: 0.5rem;
+    border: none;
+    background-color: #00ff88;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.cadastrar-button button:hover{
+    background-color: #0ae9e9;
+}
+.cadastrar-button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #000000ef;  
+}
+
+
+/* Codigo para esconder setas de campos int --Erick */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media screen and (max-width:1336px) {
+    .form-image{
+        display: none;
+    }
+
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:1100px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+
+    .periodo-input{
+        margin-top: 2rem;
+    }
+
+    .periodo-group{
+        flex-direction: column;
+    }
+
+    .periodo-group{
+        margin-top: 00.5rem;
+    }
+}
+
+@media screen and (max-width:1115px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 12rem;
+        padding-right: 5rem;
+        margin-top: 20px;
+       
+    }
+
+    .periodo-input{
+        margin-top: 2rem;
+    }
+
+    .periodo-group{
+        flex-direction: column;
+    }
+
+    .periodo-group{
+        margin-top: 00.5rem;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .form-image{
+        display:none;
+    }
+
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media screen and (max-width:900px){
+    .container{
+        width: 65%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 12rem;
+        padding-right: 5rem;
+        margin-top: 20px;
+       
+    }
+    .cadastrar-button button {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width:530px){
+    .container{
+        width: 95%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+}
+
+/*media query alterada*/
