@@ -9,13 +9,22 @@
     border: 1px solid rgba(0,0,0,.0625);
 }
 
-.flex-dashboard header a{
+.flex-dashboard header a{ /*altera tamamho do h2 "Geral"*/
+    font-size: 35px;
+    font-weight: bold;
     text-decoration: none; 
     color: #72777a;
     height: 30px;
     width: 100px;
 }
 
+.flex-dashboard header .adm{ /*altera tamamho do h2 "adm"*/
+    font-size: 1rem;
+    text-decoration: none; 
+    color: #72777a;
+    height: 30px;
+    width: 100px;
+}
 .flex-dashboard header svg{
     color: #6e8efb;
     height: 30px;

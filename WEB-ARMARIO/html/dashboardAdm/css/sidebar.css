@@ -50,30 +50,41 @@ div.menu ul{
 }
 
 div.menu ul li{
-    border: none;
     padding: 20px 20px;/*aaltera a position dos elementos dentro do menu */
     width: 100%;
     display: flex;      /*display: flex/flex-direction:row;/align-items: center;//estão centralizando os icons */ 
     flex-direction: row;   
     align-items: center; 
-    border: 1px solid rgba(15, 15, 15, 0.048);
+    transition: .2s all ease-in-out;
+    
 }
 
-div.menu ul :hover{
-    /*border-left: 2px solid #6e8efb; /*barra ao lado dos nomes do menuu*/
+div.menu ul li :hover{ /*gambiarra para altear a cor dos link*/
+    cursor: pointer;
     color: #6e8efb;
+    background-color: rgba(146, 139, 139, 0);
+}
+
+ul  :hover{
+    border-left: 5px solid #6e8efb;  /*barra ao lado dos nomes do menuu*/
+    cursor: pointer;
+    color: #6e8efb;
+    background-color: rgba(155, 152, 152, 0.521);
 }
 
 
 div.menu ul li svg{
     color: rgb(221, 226, 255);
     font-size: 25px;
+    border: none;
 }
 
 div.menu ul li a{
-    color: #72777a;
+    color: #868b89;
     margin-left: 20px;
     text-transform: none;
+    position: relative;
+    border: none;
 }
 /*28:46*/
 /*https://www.youtube.com/watch?v=0MY0B_BjQOw deu b.o aqui no css, ainda não encontrei o erro*/
