@@ -14,7 +14,7 @@
 
 			<h1>Alugue seu armario!</h1>
 
-			<img src="astronauta.svg" class="left-login-img" alt="astronauta animação">
+			<img src="c.png" class="left-login-img" alt="cadeado">
 
 		</div>
 
@@ -37,11 +37,11 @@
 					<input type="password" name="senha" placeholder="Senha">
 
 				</div>
-			
-				<button  class="button-logar"></div>><a>Entrar</a></button>
-				<button  class="button-logar"></div>><a>Cadastre</a></button>
-			    
-				<a href="html/cadastro.html" class="esqueci">esqueci minha senha</a>
+
+				<button class="bnt-login"><a href="#">Entrar</a></button>
+				<button class="bnt-login"><a href="#">Cadastre-se</a></button>
+
+				<a href="#">esqueci minha senha</as>
 			</div>
 		</div>
 
