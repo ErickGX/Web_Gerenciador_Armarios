@@ -31,13 +31,13 @@ sidebar .sidebar-title{
     border-right: 0px; /*parei no 14:52 https://www.youtube.com/watch?v=0MY0B_BjQOw */
 }
 sidebar .sidebar-title img{ /*altera tamamho da img*/
-    height: 90px;
-    width: 90px; 
+    height: 100px;
+    width: 100px; 
     
 }
 sidebar .sidebar-title h2{ /*altera tamamho da h2/ ver depois um logo sem escrita locketec*/
     font-size: 16px;
-    margin-top: -5px;
+    margin-top: -1.5rem;
     color: black;
 }
 div.menu{
