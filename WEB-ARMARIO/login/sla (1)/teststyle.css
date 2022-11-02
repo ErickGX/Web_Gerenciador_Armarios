@@ -30,6 +30,13 @@ body*{
 
 }
 
+.span-required{
+    font-size:12px;
+    margin: 3px 0 0 1px; 
+    display: none;
+    color: red;
+}
+
 .pt-direita-login{
 	width: 50vw;
 	height: 100vh;

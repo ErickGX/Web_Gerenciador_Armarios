@@ -27,14 +27,18 @@
 
 				<div class="form">
 					
-					<label for="RM">RM:</label>
-					<input type="number" name="RM" placeholder="RM">
+					<label for="email">Email:</label>
+					<input type="text" name="email" placeholder="email" class="input required" oninput="emailValidate();" >
+
+					<span class="span-required">Email invalido</span>
 
 				</div>
 				<div class="form">
 
 					<label for="senha">Senha:</label>
-					<input type="password" name="senha" placeholder="Senha">
+					<input type="password" name="senha" placeholder="Senha"  class="input required" oninput="senhaValidate();" >
+
+					<span class="span-required">Senha invalida</span>
 
 				</div>
 
@@ -51,4 +55,49 @@
 	</div><!--main-login-->
 
 </body>
+<script>
+        const form = document.getElementById('Forms');
+        const campos = document.querySelectorAll('.required');
+        const spans = document.querySelectorAll('.span-required');
+		const  emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+     form.addEventListener('submit', (event) => {
+        event.preventDefault();
+       senhaValidate();
+	 	emailValidate();
+
+     }
+     );
+
+    function setError(index){
+        campos[index].style.border='1px solid #e63636';
+        spans[index].style.display = 'Block';
+    }
+
+    function RemoveError(index){
+        campos[index].style.border='';
+        spans[index].style.display = 'none';
+    }
+	function emailValidate(){
+        if (emailRegex.test(campos[0].value))
+        {
+            RemoveError(0);
+        }
+        else
+        {
+           setError(0);
+        }
+    }
+     function senhaValidate(){
+         if (campos[1].value.length<8)
+         {
+             setError(1);
+         }
+         else
+         {
+             RemoveError(1);
+         }
+     }
+
+     </script>
 </html>
