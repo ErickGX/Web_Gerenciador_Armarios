@@ -7,11 +7,10 @@ main {
 
 main .main-content{
     padding: 30px;
-    width: 10px;
-    border: 1px solid red;
-    width: calc(100% - 90px);
+    width: 100%;
+    height: calc(100% - 90px);
+   overflow: auto;
 }
-
 .card:hover{
     border-color: #3751FF;
     cursor: pointer;

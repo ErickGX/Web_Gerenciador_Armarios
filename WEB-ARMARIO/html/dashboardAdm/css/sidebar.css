@@ -83,6 +83,7 @@ div.menu ul li a{
     color: #868b89;
     margin-left: 20px;
     text-transform: none;
+    text-decoration: none;
     position: relative;
     border: none;
 }
