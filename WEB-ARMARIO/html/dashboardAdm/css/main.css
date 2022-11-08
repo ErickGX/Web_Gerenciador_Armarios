@@ -12,3 +12,8 @@ main .main-content{
     width: calc(100% - 90px);
 }
 
+.card:hover{
+    border-color: #3751FF;
+    cursor: pointer;
+    color: #3751FF;
+}
