@@ -41,3 +41,17 @@ main .main-content{
     cursor: pointer;
     color: #3751FF;
 }
+
+.button-aprovado{
+	margin-left: 70%;
+	background-color: greenyellow;
+	padding: -10%;
+	border-radius: 5px;
+}
+
+.button-negado{
+	margin-left: 20px;
+	background-color: red;
+	padding: -10%;
+	border-radius: 5px;
+}
