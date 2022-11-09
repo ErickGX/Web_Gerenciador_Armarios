@@ -36,22 +36,26 @@ main .main-content{
 									   color-stop(0.86, rgb(28,58,148)));
 }
 
-.card:hover{
+.card, .button-aprovado:hover{
     border-color: #3751FF;
     cursor: pointer;
     color: #3751FF;
 }
 
 .button-aprovado{
-	margin-left: 70%;
+	margin-left: 65%;
 	background-color: greenyellow;
-	padding: -10%;
+	padding: 4px 8px 4px 8px;
 	border-radius: 5px;
 }
 
 .button-negado{
 	margin-left: 20px;
 	background-color: red;
-	padding: -10%;
-	border-radius: 5px;
+	padding: 4px 11px 4px 11px;
+	border-radius: 5px;	
+}
+
+.list-group-item :hover{
+	display: none;
 }
