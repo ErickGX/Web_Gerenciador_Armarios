@@ -36,23 +36,22 @@ main .main-content{
 									   color-stop(0.86, rgb(28,58,148)));
 }
 
-.card, .button-aprovado:hover{
+.card:hover{
     border-color: #3751FF;
     cursor: pointer;
     color: #3751FF;
 }
 
 .button-aprovado{
-	margin-left: 65%;
+	margin-left: 90%;
 	background-color: greenyellow;
 	padding: 4px 8px 4px 8px;
 	border-radius: 5px;
 }
 
 .button-negado{
-	margin-left: 20px;
 	background-color: red;
-	padding: 4px 11px 4px 11px;
+	padding: 3px 11px 3px 11px;
 	border-radius: 5px;	
 }
 
